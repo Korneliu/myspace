@@ -1,10 +1,14 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Notes from '../components/Notes';
+import Code from '../components/Code';
 
 const Navbar = () => (
   <div>
-    <h1>Navbar</h1>
-    <Notes />
+    <h2>Navbar</h2>
+    <NavLink to='/' activeClassName="is-active" exact={true}>MySpace</NavLink>
+    <NavLink to='/notes' activeClassName='is-active ' >Notes</NavLink>
+    <NavLink to='/code' activeClassName='is-active'>Code</NavLink>
   </div>
 );
 
