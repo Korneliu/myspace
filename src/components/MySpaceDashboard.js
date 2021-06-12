@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 
 const MySpaceDashboard = () => (
   <div>
-    <h1>MySpaceDashboard</h1>
+    <h1>MySpace Dashboard</h1>
     <Navbar />
   </div>
 );
