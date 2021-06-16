@@ -21,6 +21,18 @@ const addNote = (
     note
   }
 });
+//ADD_SELFIMPNOTE
+const addSelfImpNote = (
+  { title = '',
+    text = ''
+  } = {}) => ({
+    type: 'ADD_SELFIMPNOTE',
+    selfImpNotes: {
+      id: uuidv4(),
+      title,
+      text
+    }
+  })
 // REMOVE_NOTE
 const removeNote = ({ id } = {}) => ({
   type: 'REMOVE_NOTE',
@@ -36,8 +48,21 @@ const notesReducer = (state = notesReducerDefaultState, action) => {
         action.notes
       ]
     case 'REMOVE_NOTE':
+      console.log(action.id)
       return state.filter(({ id }) => id !== action.id);
 
+    default:
+      return state;
+  }
+}
+const selfImpNoteDefaultState = [];
+const selfImpNotesReducer = (state = selfImpNoteDefaultState, action) => {
+  switch (action.type) {
+    case 'ADD_SELFIMPONOTE':
+      return [
+        ...state,
+        action.selfImpNotes
+      ]
     default:
       return state;
   }
@@ -46,9 +71,11 @@ const notesReducer = (state = notesReducerDefaultState, action) => {
 //Store creation
 const store = createStore(
   combineReducers({
-    notes: notesReducer
+    notes: notesReducer,
+    selfImpNotes: selfImpNotesReducer
   })
 );
+
 
 store.subscribe(() => {
   console.log(store.getState());
@@ -61,6 +88,7 @@ store.dispatch(removeNote({ id: noteOne.notes.id }))
 
 console.log(noteOne)
 console.log(noteTwo)
+
 
 const jsx = (
   <div>
@@ -84,6 +112,15 @@ const demostate = {
   }]
 }
 
+// const add = ({ a, b }, c) => a + b + c
+
+// console.log(add({ a: 1, b: 3 }, 55));
+
+// const myName = ({ name, lastName }) => {
+//   return `My name is ${name} and my last name is ${lastName}`
+// }
+
+// console.log(myName({ name: "Max", lastName: "Cen" }));
 
 ReactDOM.render(jsx, document.getElementById('app'))
 
