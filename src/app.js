@@ -5,6 +5,9 @@ import './styles/styles.scss'
 import AppRouter from './routers/AppRouter';
 import { createStore, combineReducers } from 'redux';
 import { v4 as uuidv4 } from 'uuid';
+import { addSelfImpNote } from './actions/selfImpNotes';
+import { removeSelfImpNote } from './actions/selfImpNotes';
+import { selfImpNotesReducer } from './reducers/selfImpNotes';
 
 
 //Actions generators
@@ -21,23 +24,16 @@ const addNote = (
     note
   }
 });
-//ADD_SELFIMPNOTE
-const addSelfImpNote = (
-  { title = '',
-    text = ''
-  } = {}) => ({
-    type: 'ADD_SELFIMPNOTE',
-    selfImpNotes: {
-      id: uuidv4(),
-      title,
-      text
-    }
-  })
+
+
+
 // REMOVE_NOTE
 const removeNote = ({ id } = {}) => ({
   type: 'REMOVE_NOTE',
   id
-})
+});
+
+
 // Reducers
 const notesReducerDefaultState = []
 const notesReducer = (state = notesReducerDefaultState, action) => {
@@ -55,18 +51,8 @@ const notesReducer = (state = notesReducerDefaultState, action) => {
       return state;
   }
 }
-const selfImpNoteDefaultState = [];
-const selfImpNotesReducer = (state = selfImpNoteDefaultState, action) => {
-  switch (action.type) {
-    case 'ADD_SELFIMPONOTE':
-      return [
-        ...state,
-        action.selfImpNotes
-      ]
-    default:
-      return state;
-  }
-}
+
+
 
 //Store creation
 const store = createStore(
@@ -85,9 +71,12 @@ const noteOne = store.dispatch(addNote({ description: 'OBJ', note: 'learn about 
 const noteTwo = store.dispatch(addNote({ description: 'JS', note: 'learn about spread op' }))
 
 store.dispatch(removeNote({ id: noteOne.notes.id }))
+const selfImpNoteOne = store.dispatch(addSelfImpNote({ title: 'room', text: 'biggest roo' }));
+store.dispatch(removeSelfImpNote({ id: selfImpNoteOne }));
 
 console.log(noteOne)
 console.log(noteTwo)
+console.log(selfImpNoteOne)
 
 
 const jsx = (
