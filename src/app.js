@@ -31,6 +31,14 @@ const removeNote = ({ id } = {}) => ({
   id
 });
 
+//EDIT_NOTE
+const editNote = (id, updates) => ({
+  type: 'EDIT_NOTE',
+  id,
+  updates
+})
+
+
 // Reducers
 const notesReducerDefaultState = []
 const notesReducer = (state = notesReducerDefaultState, action) => {
@@ -42,6 +50,17 @@ const notesReducer = (state = notesReducerDefaultState, action) => {
       ]
     case 'REMOVE_NOTE':
       return state.filter(({ id }) => id !== action.id);
+    case 'EDIT_NOTE':
+      return state.map((note) => {
+        if (note.id === action.id) {
+          return {
+            ...note,
+            ...action.updates
+          }
+        } else {
+          return note;
+        }
+      })
 
     default:
       return state;
@@ -66,8 +85,9 @@ const selfImpNoteOne = store.dispatch(addSelfImpNote({ title: 'room', text: 'big
 
 store.dispatch(removeNote({ id: noteOne.notes.id }))
 //store.dispatch(removeSelfImpNote({ id: selfImpNoteOne.selfImpNotes.id }));
+store.dispatch(editNote(noteTwo.notes.id, { description: 'whatever' }))
 
-console.log(noteOne.notes.id)
+
 // console.log(noteTwo)
 //console.log(selfImpNoteOne)
 

@@ -1,5 +1,4 @@
 
-
 const selfImpNotesDefaultState = [];
 export const selfImpNotesReducer = (state = selfImpNotesDefaultState, action) => {
   switch (action.type) {
