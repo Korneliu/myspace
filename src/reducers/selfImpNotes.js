@@ -8,7 +8,7 @@ export const selfImpNotesReducer = (state = selfImpNotesDefaultState, action) =>
         ...state,
         action.selfImpNotes
       ]
-    case 'REMOVE_SELFIMPONOTE':
+    case 'REMOVE_SELFIMPNOTE':
       return state.filter(({ id }) => id !== action.id);
     default:
       return state;

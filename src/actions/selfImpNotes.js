@@ -18,3 +18,4 @@ export const removeSelfImpNote = ({ id } = {}) => ({
   type: 'REMOVE_SELFIMPNOTE',
   id
 });
+

@@ -25,14 +25,11 @@ const addNote = (
   }
 });
 
-
-
 // REMOVE_NOTE
 const removeNote = ({ id } = {}) => ({
   type: 'REMOVE_NOTE',
   id
 });
-
 
 // Reducers
 const notesReducerDefaultState = []
@@ -44,15 +41,12 @@ const notesReducer = (state = notesReducerDefaultState, action) => {
         action.notes
       ]
     case 'REMOVE_NOTE':
-      console.log(action.id)
       return state.filter(({ id }) => id !== action.id);
 
     default:
       return state;
   }
 }
-
-
 
 //Store creation
 const store = createStore(
@@ -62,21 +56,20 @@ const store = createStore(
   })
 );
 
-
 store.subscribe(() => {
   console.log(store.getState());
 })
 
 const noteOne = store.dispatch(addNote({ description: 'OBJ', note: 'learn about objects' }))
 const noteTwo = store.dispatch(addNote({ description: 'JS', note: 'learn about spread op' }))
+const selfImpNoteOne = store.dispatch(addSelfImpNote({ title: 'room', text: 'biggest room' }));
 
 store.dispatch(removeNote({ id: noteOne.notes.id }))
-const selfImpNoteOne = store.dispatch(addSelfImpNote({ title: 'room', text: 'biggest roo' }));
-store.dispatch(removeSelfImpNote({ id: selfImpNoteOne }));
+//store.dispatch(removeSelfImpNote({ id: selfImpNoteOne.selfImpNotes.id }));
 
-console.log(noteOne)
-console.log(noteTwo)
-console.log(selfImpNoteOne)
+console.log(noteOne.notes.id)
+// console.log(noteTwo)
+//console.log(selfImpNoteOne)
 
 
 const jsx = (
@@ -101,15 +94,6 @@ const demostate = {
   }]
 }
 
-// const add = ({ a, b }, c) => a + b + c
-
-// console.log(add({ a: 1, b: 3 }, 55));
-
-// const myName = ({ name, lastName }) => {
-//   return `My name is ${name} and my last name is ${lastName}`
-// }
-
-// console.log(myName({ name: "Max", lastName: "Cen" }));
 
 ReactDOM.render(jsx, document.getElementById('app'))
 
