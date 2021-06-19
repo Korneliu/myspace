@@ -85,7 +85,7 @@ const selfImpNoteOne = store.dispatch(addSelfImpNote({ title: 'room', text: 'big
 
 store.dispatch(removeNote({ id: noteOne.notes.id }))
 //store.dispatch(removeSelfImpNote({ id: selfImpNoteOne.selfImpNotes.id }));
-store.dispatch(editNote(noteTwo.notes.id, { description: 'whatever' }))
+store.dispatch(editNote(noteTwo.notes.id, { description: 'whatever', note: 'learn about whatever' }))
 
 
 // console.log(noteTwo)
