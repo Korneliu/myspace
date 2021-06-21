@@ -1,7 +1,6 @@
-import React from 'react';
 
 const notesReducerDefaultState = []
-export const notesReducer = (state = notesReducerDefaultState, action) => {
+export default (state = notesReducerDefaultState, action) => {
   switch (action.type) {
     case 'ADD_NOTE':
       return [
@@ -21,8 +20,9 @@ export const notesReducer = (state = notesReducerDefaultState, action) => {
           return note;
         }
       })
-
     default:
       return state;
   }
 }
+
+

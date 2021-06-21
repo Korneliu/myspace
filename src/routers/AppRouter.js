@@ -11,7 +11,7 @@ const AppRouter = () => (
       <Switch>
         <Route path="/" component={MySpaceDashboard} exact={true} />
         <Route path="/notes" component={Notes} />
-        <Route path="/selfimpcode" component={selfImpNotes} />
+        <Route path="/selfimpnotes" component={selfImpNotes} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>

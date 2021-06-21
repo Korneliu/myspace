@@ -1,50 +1,27 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import AppRouter from './routers/AppRouter';
+import configureStore from './store/configureStore';
+import { addNote } from './actions/notes';
+import { addSelfImpNote } from './actions/selfImpNotes';
 import 'normalize.css/normalize.css'
 import './styles/styles.scss'
-import AppRouter from './routers/AppRouter';
-import { createStore, combineReducers } from 'redux';
-import { addSelfImpNote } from './actions/selfImpNotes';
-import { removeSelfImpNote } from './actions/selfImpNotes';
-import { selfImpNotesReducer } from './reducers/selfImpNotes';
-import { addNote } from './actions/notes';
-import { removeNote } from './actions/notes';
-import { editNote } from './actions/notes';
-import { notesReducer } from './reducers/notes';
 
 
+const store = configureStore();
 
-//Store creation
-const store = createStore(
-  combineReducers({
-    notes: notesReducer,
-    selfImpNotes: selfImpNotesReducer
-  })
-);
+store.dispatch(addNote({ description: 'OBJ', note: 'learn about objects' }))
+store.dispatch(addNote({ description: 'JS', note: 'learn about spread op' }))
+store.dispatch(addSelfImpNote({ title: 'room', text: 'biggest room' }));
 
-store.subscribe(() => {
-  console.log(store.getState());
-})
-
-const noteOne = store.dispatch(addNote({ description: 'OBJ', note: 'learn about objects' }))
-const noteTwo = store.dispatch(addNote({ description: 'JS', note: 'learn about spread op' }))
-const selfImpNoteOne = store.dispatch(addSelfImpNote({ title: 'room', text: 'biggest room' }));
-
-store.dispatch(removeNote({ id: noteOne.notes.id }))
-//store.dispatch(removeSelfImpNote({ id: selfImpNoteOne.selfImpNotes.id }));
-store.dispatch(editNote(noteTwo.notes.id, { description: 'whatever', note: 'learn about whatever' }))
-
-
-// console.log(noteTwo)
-//console.log(selfImpNoteOne)
-
+console.log(store.getState());
 
 const jsx = (
   <div>
     <AppRouter />
   </div>
 )
-
+/* 
 const demostate = {
   notes: [{
     id: 'asdfasd',
@@ -60,7 +37,7 @@ const demostate = {
     date: 'December 24'
   }]
 }
-
+ */
 
 
 ReactDOM.render(jsx, document.getElementById('app'))
