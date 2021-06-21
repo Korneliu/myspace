@@ -4,68 +4,15 @@ import 'normalize.css/normalize.css'
 import './styles/styles.scss'
 import AppRouter from './routers/AppRouter';
 import { createStore, combineReducers } from 'redux';
-import { v4 as uuidv4 } from 'uuid';
 import { addSelfImpNote } from './actions/selfImpNotes';
 import { removeSelfImpNote } from './actions/selfImpNotes';
 import { selfImpNotesReducer } from './reducers/selfImpNotes';
+import { addNote } from './actions/notes';
+import { removeNote } from './actions/notes';
+import { editNote } from './actions/notes';
+import { notesReducer } from './reducers/notes';
 
 
-//Actions generators
-//ADD_NOTE
-const addNote = (
-  { description = '',
-    note = ''
-  } = {}) =>
-({
-  type: 'ADD_NOTE',
-  notes: {
-    id: uuidv4(),
-    description,
-    note
-  }
-});
-
-// REMOVE_NOTE
-const removeNote = ({ id } = {}) => ({
-  type: 'REMOVE_NOTE',
-  id
-});
-
-//EDIT_NOTE
-const editNote = (id, updates) => ({
-  type: 'EDIT_NOTE',
-  id,
-  updates
-})
-
-
-// Reducers
-const notesReducerDefaultState = []
-const notesReducer = (state = notesReducerDefaultState, action) => {
-  switch (action.type) {
-    case 'ADD_NOTE':
-      return [
-        ...state,
-        action.notes
-      ]
-    case 'REMOVE_NOTE':
-      return state.filter(({ id }) => id !== action.id);
-    case 'EDIT_NOTE':
-      return state.map((note) => {
-        if (note.id === action.id) {
-          return {
-            ...note,
-            ...action.updates
-          }
-        } else {
-          return note;
-        }
-      })
-
-    default:
-      return state;
-  }
-}
 
 //Store creation
 const store = createStore(
@@ -113,6 +60,7 @@ const demostate = {
     date: 'December 24'
   }]
 }
+
 
 
 ReactDOM.render(jsx, document.getElementById('app'))
