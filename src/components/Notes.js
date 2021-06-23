@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import NotesListItem from './NotesListItem';
+import NoteListItem from './NoteListItem';
 
 const Notes = (props) => (
   <div>
-    <h1>NotesList</h1>
+    <h1>Notes List</h1>
     {
       props.notes.map((note) => {
-        return <NotesListItem key={note.id}{...note} />
+        return <NoteListItem key={note.id}{...note} />
       })
     }
   </div>
