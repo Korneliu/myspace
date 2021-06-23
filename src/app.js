@@ -12,8 +12,10 @@ import './styles/styles.scss'
 const store = configureStore();
 
 
-store.dispatch(addNote({ description: 'OBJ', note: 'learn about objects' }))
-store.dispatch(addNote({ description: 'JS', note: 'learn about spread op' }))
+
+store.dispatch(addNote({ description: 'Objects', note: 'learn about objects' }))
+store.dispatch(addNote({ description: 'ForEach', note: 'learn about ForEach ' }))
+store.dispatch(addNote({ description: 'Spread', note: 'learn about spread op' }))
 store.dispatch(addSelfImpNote({ title: 'room', text: 'biggest room' }));
 
 console.log(store.getState());
@@ -23,6 +25,7 @@ const jsx = (
     <AppRouter />
   </Provider>
 )
+
 
 
 ReactDOM.render(jsx, document.getElementById('app'))

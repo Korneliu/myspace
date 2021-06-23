@@ -1,11 +1,24 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+import { connect } from 'react-redux';
+import NotesListItem from './NotesListItem';
 
-const Notes = () => (
+const Notes = (props) => (
   <div>
-    <Navbar />
-    <h3>Notes</h3>
+    <h1>NotesList</h1>
+    {
+      props.notes.map((note) => {
+        return <NotesListItem key={note.id}{...note} />
+      })
+    }
   </div>
-);
+)
 
-export default Notes;
+
+const mapStateToProps = (state) => {
+  return {
+    notes: state.notes,
+    notif: state.selfImpNotes
+  };
+};
+
+export default connect(mapStateToProps)(Notes);
