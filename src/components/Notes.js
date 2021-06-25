@@ -2,9 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import NoteListItem from './NoteListItem';
 import NoteForm from './NoteForm';
+import Navbar from './Navbar';
 
 const Notes = (props) => (
   <div>
+    <Navbar />
     <h1>Add Note</h1>
     <NoteForm />
     <h1>Notes List</h1>

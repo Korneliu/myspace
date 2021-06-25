@@ -26,6 +26,7 @@ export default class NoteForm extends React.Component {
             onChange={this.onDescriptionChange}
           />
           <textarea placeholder="Add your note"
+            value={this.state.note}
             onChange={this.onNoteChange}
           >
           </textarea>
