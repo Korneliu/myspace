@@ -3,12 +3,17 @@ import { connect } from 'react-redux';
 import NoteListItem from './NoteListItem';
 import NoteForm from './NoteForm';
 import Navbar from './Navbar';
+import { addNote } from '../actions/notes';
 
 const Notes = (props) => (
   <div>
     <Navbar />
     <h1>Add Note</h1>
-    <NoteForm />
+    <NoteForm
+      onSubmit={(note) => {
+        props.dispatch(addNote(note))
+      }}
+    />
     <h1>Notes List</h1>
     {
       props.notes.map((note) => {

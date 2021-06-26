@@ -14,10 +14,23 @@ export default class NoteForm extends React.Component {
     const note = e.target.value;
     this.setState(() => ({ note }))
   }
+  onSubmit = (e) => {
+    e.preventDefault();
+    if (!this.state.description || !this.state.note) {
+      this.setState(() => ({ error: 'Please provide description and note' }))
+    } else {
+      this.setState(() => ({ error: '' }))
+      this.props.onSubmit({
+        description: this.state.description,
+        note: this.state.note
+      })
+    }
+  }
   render() {
     return (
       <div>
-        <form>
+        {this.state.error && <p>{this.state.error}</p>}
+        <form onSubmit={this.onSubmit}>
           <input
             type="text"
             placeholder="Description"
