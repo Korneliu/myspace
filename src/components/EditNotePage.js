@@ -19,7 +19,7 @@ const EditNotePage = (props) => {
 
 const mapStateToProps = (state, props) => {
   return {
-    notes: state.notes.find((note) => note.id === props.match.params.id)
+    note: state.notes.find((note) => note.id === props.match.params.id)
   }
 }
 

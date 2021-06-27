@@ -2,11 +2,15 @@ import React from 'react';
 
 
 export default class NoteForm extends React.Component {
-  state = {
-    description: '',
-    text: '',
-    error: ''
+  constructor(props) {
+    super(props);
+    this.state = {
+      description: props.note ? props.note.description : '',
+      text: props.note ? props.note.text : '',
+      error: ''
+    }
   }
+
   onDescriptionChange = (e) => {
     const description = e.target.value;
     this.setState(() => ({ description }))
