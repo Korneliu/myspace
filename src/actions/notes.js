@@ -3,14 +3,14 @@ import { v4 as uuidv4 } from 'uuid';
 //ADD_NOTE
 export const addNote = (
   { description = '',
-    note = ''
+    text = ''
   } = {}) =>
 ({
   type: 'ADD_NOTE',
   notes: {
     id: uuidv4(),
     description,
-    note
+    text
   }
 });
 

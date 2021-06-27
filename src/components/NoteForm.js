@@ -4,28 +4,30 @@ import React from 'react';
 export default class NoteForm extends React.Component {
   state = {
     description: '',
-    note: ''
+    text: '',
+    error: ''
   }
   onDescriptionChange = (e) => {
     const description = e.target.value;
     this.setState(() => ({ description }))
   };
   onNoteChange = (e) => {
-    const note = e.target.value;
-    this.setState(() => ({ note }))
+    const text = e.target.value;
+    this.setState(() => ({ text }))
   }
   onSubmit = (e) => {
     e.preventDefault();
-    if (!this.state.description || !this.state.note) {
+    if (!this.state.description || !this.state.text) {
       this.setState(() => ({ error: 'Please provide description and note' }))
     } else {
       this.setState(() => ({ error: '' }))
       this.props.onSubmit({
         description: this.state.description,
-        note: this.state.note
+        text: this.state.text
       })
     }
   }
+
   render() {
     return (
       <div>
@@ -39,11 +41,13 @@ export default class NoteForm extends React.Component {
             onChange={this.onDescriptionChange}
           />
           <textarea placeholder="Add your note"
-            value={this.state.note}
+            value={this.state.text}
             onChange={this.onNoteChange}
           >
           </textarea>
-          <button>Add Note</button>
+          <button
+
+          >Add Note</button>
         </form>
       </div>
     )

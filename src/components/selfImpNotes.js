@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 const selfImpNotes = () => (
   <div>
     <Navbar />
-    <h3>Self Improvement Notes</h3>
+    <h3>Self Improvement</h3>
   </div>
 );
 

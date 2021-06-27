@@ -1,26 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import NoteListItem from './NoteListItem';
-import NoteForm from './NoteForm';
 import Navbar from './Navbar';
-import { addNote } from '../actions/notes';
+import { NavLink } from 'react-router-dom';
+
+
 
 const Notes = (props) => (
   <div>
     <Navbar />
-    <h1>Add Note</h1>
-    <NoteForm
-      onSubmit={(note) => {
-        props.dispatch(addNote(note))
-      }}
-    />
+    <NavLink to='/createnote' activeClassName="is-active">Create Note</NavLink>
     <h1>Notes List</h1>
     {
       props.notes.map((note) => {
         return <NoteListItem key={note.id}{...note} />
       })
     }
-
   </div>
 )
 
