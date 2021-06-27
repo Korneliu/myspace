@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import NoteForm from './NoteForm';
 import Navbar from './Navbar';
+import { editNote } from '../actions/notes';
 
 const EditNotePage = (props) => {
   return (
@@ -10,7 +11,8 @@ const EditNotePage = (props) => {
       <NoteForm
         note={props.note}
         onSubmit={(note) => {
-          console.log('updated', note)
+          props.dispatch(editNote(props.note.id, note))
+          props.history.push('/notes')
         }}
       />
     </div>
