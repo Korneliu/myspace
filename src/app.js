@@ -19,6 +19,7 @@ store.dispatch(addSelfImpNote({ title: 'room', text: 'biggest room' }));
 
 console.log(store.getState());
 
+
 const jsx = (
   <Provider store={store}>
     <AppRouter />
