@@ -14,7 +14,7 @@ const AppRouter = () => (
         <Route path="/" component={MySpaceDashboard} exact={true} />
         <Route path="/notes" component={Notes} />
         <Route path="/createnote" component={AddNotePage} />
-        <Route path="/selfimpnotes" component={SelfImpNotes} />
+
         <Route path="/editnote/:id" component={EditNotePage} />
         <Route component={NotFoundPage} />
       </Switch>
@@ -23,3 +23,6 @@ const AppRouter = () => (
 )
 
 export default AppRouter;
+
+
+// <Route path="/selfimpnotes" component={SelfImpNotes} />
