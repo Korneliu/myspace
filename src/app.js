@@ -15,7 +15,7 @@ const store = configureStore();
 store.dispatch(addNote({ description: 'Objects', text: 'learn about objects' }))
 store.dispatch(addNote({ description: 'ForEach', text: 'learn about ForEach ' }))
 store.dispatch(addNote({ description: 'Spread', text: 'learn about spread op' }))
-store.dispatch(addSelfImpNote({ title: 'room', text: 'biggest room' }));
+//store.dispatch(addSelfImpNote({ title: 'room', text: 'biggest room' }));
 
 console.log(store.getState());
 
