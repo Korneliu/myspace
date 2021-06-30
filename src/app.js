@@ -18,6 +18,7 @@ store.dispatch(addNote({ description: 'Spread', text: 'learn about spread op' })
 store.dispatch(addSelfImpNote({ title: 'room', text: 'biggest room' }));
 
 console.log(store.getState());
+console.log()
 
 
 const jsx = (

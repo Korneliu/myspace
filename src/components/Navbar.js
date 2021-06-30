@@ -7,8 +7,10 @@ const Navbar = () => (
     <NavLink to='/' activeClassName="is-active" exact={true}>MySpace</NavLink>
     <NavLink to='/notes' activeClassName='is-active'>Notes</NavLink>
     <NavLink to='/selfimpnotes' activeClassName='is-active'>Self Improvement</NavLink>
+
   </div>
 );
 
 
 export default Navbar;
+

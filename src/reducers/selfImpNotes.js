@@ -1,5 +1,5 @@
 
-/* const selfImpNotesDefaultState = [];
+const selfImpNotesDefaultState = [];
 export default (state = selfImpNotesDefaultState, action) => {
   switch (action.type) {
     case 'ADD_SELFIMPNOTE':
@@ -13,4 +13,3 @@ export default (state = selfImpNotesDefaultState, action) => {
       return state;
   }
 }
- */
