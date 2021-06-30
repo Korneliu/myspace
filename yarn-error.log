@@ -1,0 +1,81 @@
+Arguments: 
+  C:\Program Files (x86)\nodejs\node.exe C:\Users\olbit\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\olbit\bin;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files\Oculus\Support\oculus-runtime;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\QuickTime\QTSystem;C:\Program Files (x86)\Common Files\Intuit\QBPOSSDKRuntime;C:\Program Files (x86)\Common Files\Acronis\SnapAPI;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Ruby24-x64\bin;C:\Program Files\MongoDB\Server\3.4\bin;C:\WINDOWS\System32\OpenSSH;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\Brackets\command;C:\Program Files\Git\cmd;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\nodejs;C:\Users\olbit\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Sublime Text 3;C:\Program Files\Heroku\bin;C:\Users\olbit\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\olbit\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  14.16.1
+
+Platform: 
+  win32 ia32
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (C:\Users\olbit\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:137008:13)
+      at Interface.emit (events.js:315:20)
+      at Interface._ttyWrite (readline.js:875:16)
+      at ReadStream.onkeypress (readline.js:213:10)
+      at ReadStream.emit (events.js:315:20)
+      at emitKeys (internal/readline/utils.js:345:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1144:36)
+      at ReadStream.emit (events.js:315:20)
+      at addChunk (internal/streams/readable.js:309:12)
+
+npm manifest: 
+  {
+    "name": "boilerplate",
+    "version": "1.0.0",
+    "engines": {
+      "node": "14.16.1"
+    },
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "serv": "live-server public/",
+      "build:dev": "webpack",
+      "build:prod": "webpack -p --env production",
+      "dev-server": "webpack-dev-server",
+      "start": "node server/server.js",
+      "heroku-postbuild": "yarn run build:prod"
+    },
+    "author": "Max",
+    "license": "ISC",
+    "dependencies": {
+      "babel-cli": "6.24.1",
+      "babel-core": "6.25.0",
+      "babel-loader": "7.1.1",
+      "babel-plugin-transform-class-properties": "6.24.1",
+      "babel-plugin-transform-object-rest-spread": "^6.26.0",
+      "babel-preset-env": "1.5.2",
+      "babel-preset-react": "6.24.1",
+      "css-loader": "0.28.4",
+      "express": "^4.17.1",
+      "extract-text-webpack-plugin": "3.0.2",
+      "live-server": "^1.2.1",
+      "node-sass": "^4.14.1",
+      "normalize.css": "7.0.0",
+      "react": "17.0.2",
+      "react-dom": "17.0.2",
+      "react-modal": "2.2.2",
+      "react-redux": "7.2.4",
+      "react-router-dom": "5.2.0",
+      "sass-loader": "7.3.1",
+      "style-loader": "0.18.2",
+      "uuid": "8.3.2",
+      "validator": "8.0.0",
+      "webpack": "3.1.0",
+      "webpack-dev-server": "2.5.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
