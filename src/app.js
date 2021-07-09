@@ -16,6 +16,8 @@ store.dispatch(addNote({ description: 'Objects', text: 'learn about objects' }))
 store.dispatch(addNote({ description: 'ForEach', text: 'learn about ForEach ' }))
 store.dispatch(addNote({ description: 'Spread', text: 'learn about spread op' }))
 store.dispatch(addSelfImpNote({ title: 'room', text: 'biggest room' }));
+store.dispatch(addSelfImpNote({ title: 'selfImp1', text: 'first try' }));
+store.dispatch(addSelfImpNote({ title: 'selfImp2', text: 'second try' }));
 
 console.log(store.getState());
 
