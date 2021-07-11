@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import NoteForm from './NoteForm';
-import Navbar from './Navbar';
-import { editNote } from '../actions/notes';
+import Navbar from '../Navbar';
+import { editNote } from '../../actions/notes';
 
 const EditNotePage = (props) => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import NoteListItem from './NoteListItem';
-import Navbar from './Navbar';
+import Navbar from '../Navbar';
 import { NavLink } from 'react-router-dom';
 
 

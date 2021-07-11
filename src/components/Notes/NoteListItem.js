@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { removeNote } from '../actions/notes';
+import { removeNote } from '../../actions/notes';
 
 
 const NoteListItem = ({ dispatch, id, description, text }) => (
