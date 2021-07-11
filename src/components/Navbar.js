@@ -9,7 +9,6 @@ const Navbar = () => (
     <NavLink to='/selfimpnotes' activeClassName='is-active'>Motivation</NavLink>
     <NavLink to='/coding' activeClassName='is-active'>Coding</NavLink>
     <NavLink to='/quotes' activeClassName='is-active'>Quotes & Ideas</NavLink>
-
   </div>
 );
 

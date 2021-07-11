@@ -7,7 +7,6 @@ import NotFoundPage from '../components/NotFoundPage';
 import AddNotePage from '../components/Notes/AddNotePage';
 import EditNotePage from '../components/Notes/EditNotePage';
 import Quotes from '../components/QuotesIdeas/Quotes';
-import Ideas from '../components/QuotesIdeas/Ideas';
 
 const AppRouter = () => (
   <BrowserRouter>
