@@ -21,7 +21,8 @@ export default () => {
 
 //demo state
 const demostate = {
-  quote: [{
+  quotes: [{
+    title: 'what is important ',
     quote: 'be happy',
     author: 'max'
   }],

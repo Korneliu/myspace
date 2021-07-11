@@ -5,6 +5,7 @@ import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import { addNote } from './actions/notes';
 import { addSelfImpNote } from './actions/selfImpNotes';
+import { addIdea } from './actions/ideas';
 import 'normalize.css/normalize.css'
 import './styles/styles.scss'
 
@@ -18,6 +19,7 @@ store.dispatch(addNote({ description: 'Spread', text: 'learn about spread op' })
 store.dispatch(addSelfImpNote({ title: 'room', text: 'biggest room' }));
 store.dispatch(addSelfImpNote({ title: 'selfImp1', text: 'first try' }));
 store.dispatch(addSelfImpNote({ title: 'selfImp2', text: 'second try' }));
+store.dispatch(addIdea({ text: 'whatever' }))
 
 console.log(store.getState());
 
