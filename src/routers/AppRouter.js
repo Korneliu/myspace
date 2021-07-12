@@ -6,7 +6,7 @@ import MySpaceDashboard from '../components/MySpaceDashboard';
 import NotFoundPage from '../components/NotFoundPage';
 import AddNotePage from '../components/Notes/AddNotePage';
 import EditNotePage from '../components/Notes/EditNotePage';
-import Quotes from '../components/QuotesIdeas/Quotes';
+import QuotesIdeas from '../components/QuotesIdeas/QuotesIdeas';
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -17,7 +17,7 @@ const AppRouter = () => (
         <Route path="/selfimpnotes" component={SelfImpNotes} />
         <Route path="/createnote" component={AddNotePage} />
         <Route path="/editnote/:id" component={EditNotePage} />
-        <Route path="/quotes" component={Quotes} />
+        <Route path="/quotesideas" component={QuotesIdeas} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>

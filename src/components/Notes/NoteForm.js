@@ -50,7 +50,6 @@ export default class NoteForm extends React.Component {
           >
           </textarea>
           <button
-
           >Add Note</button>
         </form>
       </div>
