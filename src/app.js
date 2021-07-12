@@ -6,8 +6,9 @@ import configureStore from './store/configureStore';
 import { addNote } from './actions/notes';
 import { addSelfImpNote } from './actions/selfImpNotes';
 import { addIdea } from './actions/ideas';
-import 'normalize.css/normalize.css'
-import './styles/styles.scss'
+import 'normalize.css/normalize.css';
+import './styles/styles.scss';
+import './firebase/firebase';
 
 
 const store = configureStore();
