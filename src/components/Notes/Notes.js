@@ -5,7 +5,6 @@ import Navbar from '../Navbar';
 import { NavLink } from 'react-router-dom';
 
 
-
 const Notes = (props) => (
   <div>
     <Navbar />
@@ -17,8 +16,7 @@ const Notes = (props) => (
       })
     }
   </div>
-)
-
+);
 
 const mapStateToProps = (state) => {
   return {

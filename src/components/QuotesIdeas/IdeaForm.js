@@ -2,33 +2,40 @@ import React from 'react';
 
 export default class IdeaForm extends React.Component {
   state = {
-    text: ''
+    text: '',
+    error: ''
   }
   onTextChange = (e) => {
     const text = e.target.value;
     this.setState(() => ({ text }))
   }
-
-  onTextChange = (e) => {
-    const text = e.target.value;
-    this.setState(() => ({ text }))
+  onTitleChange = (e) => {
+    const title = e.target.value;
+    this.setState(() => ({ title }))
   }
-  onTextChange = (e) => {
-    const text = e.target.value;
-    this.setState(() => ({ text }))
+  onSubmit = (e) => {
+    e.preventDefault();
+    if (!this.state.text) {
+      this.setState(() => ({ error: 'Please provide text' }))
+    } else {
+      this.setState(() => ({ error: '' }))
+      this.props.onSubmit({
+        title: this.state.title,
+        text: this.state.text
+      })
+    }
   }
-
-
-
-
-
-
-
-
   render() {
     return (
       <div>
-        <form>
+        {this.state.error && <p>{this.state.error}</p>}
+        <form onSubmit={this.onSubmit}>
+          <input
+            type="text"
+            placeholder="type the title"
+            autoFocus
+            onChange={this.onTitleChange}
+          />
           <textarea
             type="text"
             placeholder="type your idea"
