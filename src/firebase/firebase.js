@@ -14,8 +14,27 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-firebase.database().ref().set({
-  name: 'Max'
-})
+const database = firebase.database();
+
+database.ref().set({
+  name: 'Max',
+  age: 44,
+  isSingle: false,
+  location: {
+    city: 'Aliso',
+    street: 'Sobrante',
+    number: 70
+  }
+}).then(() => {
+  console.log('Data is saved')
+}).catch((e) => {
+  console.log('This failed', e)
+});
+
+database.ref().update({
+  'location/city': 'Cabarete'
+});
+
+
 
 
