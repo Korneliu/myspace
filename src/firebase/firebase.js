@@ -16,25 +16,59 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-database.ref().set({
+database.ref('ideas/-MeYb5j68YGOYeeC06Xp').remove();
+
+database.ref('expenses').push({
+  description: 'first description',
+  note: 'First note',
+  amount: 23234
+})
+database.ref('expenses').push({
+  description: 'Second description',
+  note: 'Second note',
+  amount: 23234
+})
+
+database.ref('expenses').push({
+  description: 'Third description',
+  note: 'Third note',
+  amount: 23234
+})
+
+
+
+
+// database.ref()
+//   .on('value', (snapshot) => {
+//     console.log(snapshot.val());
+//   });
+// database.ref('age').set(44)
+
+
+// database.ref('location/city')
+//   .once('value')
+//   .then((snapshot) => {
+//     const val = snapshot.val();
+//     console.log(val);
+//   }).catch((e) => {
+//     console.log('error fetching data', e);
+//   });
+
+
+
+/* database.ref().set({
   name: 'Max',
   age: 44,
+  job: {
+    company: 'Amazon',
+    title: 'Software engineer'
+  },
   isSingle: false,
   location: {
     city: 'Aliso',
     street: 'Sobrante',
     number: 70
   }
-}).then(() => {
-  console.log('Data is saved')
-}).catch((e) => {
-  console.log('This failed', e)
-});
+})
 
-database.ref().update({
-  'location/city': 'Cabarete'
-});
-
-
-
-
+ */

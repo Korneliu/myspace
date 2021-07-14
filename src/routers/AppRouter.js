@@ -7,6 +7,7 @@ import AddNotePage from '../components/Notes/AddNotePage';
 import AddIdeaPage from '../components/QuotesIdeas/AddIdeaPage';
 import EditNotePage from '../components/Notes/EditNotePage';
 import QuotesIdeas from '../components/QuotesIdeas/QuotesIdeas';
+import Games from '../components/Games/Games';
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -18,6 +19,7 @@ const AppRouter = () => (
         <Route path="/createidea" component={AddIdeaPage} />
         <Route path="/editnote/:id" component={EditNotePage} />
         <Route path="/quotesideas" component={QuotesIdeas} />
+        <Route path="/games" component={Games} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
