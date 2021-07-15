@@ -1,7 +1,8 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
 import notesReducer from "../reducers/notes";
 import quotesReducer from "../reducers/quotes";
 import ideasReducer from "../reducers/ideas";
+import thunk from 'redux-thunk';
 
 
 export default () => {
@@ -24,6 +25,8 @@ const demostate = {
     author: 'max'
   }],
   ideas: [{
-    idea: 'keep improving'
+    text: 'idea text',
+    title: 'idea title'
+
   }]
 }

@@ -16,25 +16,39 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-database.ref('ideas/-MeYb5j68YGOYeeC06Xp').remove();
-
-database.ref('expenses').push({
-  description: 'first description',
-  note: 'First note',
-  amount: 23234
-})
-database.ref('expenses').push({
-  description: 'Second description',
-  note: 'Second note',
-  amount: 23234
+//child_removed
+database.ref('ideas').on('child_removed', (snapshot) => {
+  console.log(snapshot.key, snapshot.val());
 })
 
-database.ref('expenses').push({
-  description: 'Third description',
-  note: 'Third note',
-  amount: 23234
+// child_changed
+database.ref('ideas').on('child_changed', (snapshot) => {
+  console.log(snapshot.key, snapshot.val());
 })
 
+// child_added
+database.ref('ides').on('child_added', (snapshot) => {
+  console.log(snapshot.key, snapshot.val());
+});
+
+
+// database.ref('ideas')
+//   .on('value', (snapshot) => {
+//     const ideas = [];
+//     snapshot.forEach((childSnapshot) => {
+//       ideas.push({
+//         id: childSnapshot.key,
+//         ...childSnapshot.val()
+//       })
+//     })
+//     console.log(ideas)
+//   });
+
+
+// database.ref('ideas').push({
+//   title: 'first idea',
+//   text: 'first idea text'
+// })
 
 
 
@@ -56,19 +70,4 @@ database.ref('expenses').push({
 
 
 
-/* database.ref().set({
-  name: 'Max',
-  age: 44,
-  job: {
-    company: 'Amazon',
-    title: 'Software engineer'
-  },
-  isSingle: false,
-  location: {
-    city: 'Aliso',
-    street: 'Sobrante',
-    number: 70
-  }
-})
 
- */
