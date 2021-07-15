@@ -1,9 +1,12 @@
 import React from 'react';
 
 export default class IdeaForm extends React.Component {
-  state = {
-    text: '',
-    error: ''
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: props.idea ? props.idea.text : '',
+      title: props.title ? props.idea.title : ''
+    }
   }
   onTextChange = (e) => {
     const text = e.target.value;

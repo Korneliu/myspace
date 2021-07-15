@@ -20,15 +20,15 @@ export default () => {
 
 
 //demo state
-const demostate = {
-  quotes: [{
-    title: 'what is important ?',
-    quote: 'be happy',
-    author: 'max'
-  }],
-  ideas: [{
-    text: 'idea text',
-    title: 'idea title'
+// const demostate = {
+//   quotes: [{
+//     title: 'what is important ?',
+//     quote: 'be happy',
+//     author: 'max'
+//   }],
+//   ideas: [{
+//     text: 'idea text',
+//     title: 'idea title'
 
-  }]
-}
+//   }]
+// }

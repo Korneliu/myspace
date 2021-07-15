@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Navbar from '../Navbar';
 import IdeaForm from './IdeaForm';
 import { startAddIdea } from '../../actions/ideas';
-import { render } from 'enzyme';
+
 
 
 export class AddIdeaPage extends React.Component {
@@ -28,4 +28,4 @@ const mapDispatchToProps = (dispatch) => ({
   startAddIdea: (idea) => dispatch(startAddIdea(idea))
 });
 
-export default connect(mapDispatchToProps)(AddIdeaPage);
+export default connect(undefined, mapDispatchToProps)(AddIdeaPage);

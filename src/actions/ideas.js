@@ -13,8 +13,8 @@ export const startAddIdea = (ideaData = {}) => {
       title = '',
       text = ''
     } = ideaData
-    const idea = { title, text }
 
+    const idea = { title, text }
     database.ref('ideas').push(idea).then((ref) => {
       dispatch(addIdea({
         id: ref.id,
