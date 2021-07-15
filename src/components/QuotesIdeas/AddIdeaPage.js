@@ -2,19 +2,30 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Navbar from '../Navbar';
 import IdeaForm from './IdeaForm';
-import { addIdea } from '../../actions/ideas';
+import { startAddIdea } from '../../actions/ideas';
+import { render } from 'enzyme';
 
 
-const AddIdeaPage = (props) => (
-  <div>
-    <Navbar />
-    <IdeaForm
-      onSubmit={(idea) => {
-        props.dispatch(addIdea(idea));
-        props.history.push('/quotesideas')
-      }}
-    />
-  </div>
-);
+export class AddIdeaPage extends React.Component {
+  onSubmit = (idea) => {
+    this.props.startAddIdea(idea);
+    this.props.history.push('/quotesideas');
+  };
+  render() {
+    return (
+      <div>
+        <h1>Add Idea</h1>
+        <Navbar />
+        <IdeaForm
+          onSubmit={this.onSubmit}
+        />
+      </div>
+    )
+  }
+};
 
-export default connect()(AddIdeaPage);
+const mapDispatchToProps = (dispatch) => ({
+  startAddIdea: (idea) => dispatch(startAddIdea(idea))
+});
+
+export default connect(mapDispatchToProps)(AddIdeaPage);

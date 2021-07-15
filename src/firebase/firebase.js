@@ -16,7 +16,25 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-//child_removed
+export { firebase, database as default };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* //child_removed
 database.ref('ideas').on('child_removed', (snapshot) => {
   console.log(snapshot.key, snapshot.val());
 })
@@ -30,7 +48,7 @@ database.ref('ideas').on('child_changed', (snapshot) => {
 database.ref('ides').on('child_added', (snapshot) => {
   console.log(snapshot.key, snapshot.val());
 });
-
+ */
 
 // database.ref('ideas')
 //   .on('value', (snapshot) => {
