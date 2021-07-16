@@ -19,6 +19,7 @@ store.dispatch(addNote({ description: 'ForEach', text: 'learn about ForEach ' })
 store.dispatch(addNote({ description: 'Spread', text: 'learn about spread op' }))
 //store.dispatch(addIdea({ text: 'whatever' }))
 
+
 console.log(store.getState());
 
 
