@@ -23,3 +23,26 @@ export const startAddIdea = (ideaData = {}) => {
     })
   };
 };
+
+//SET_IDEAS
+export const setIdeas = (ideas) => ({
+  type: 'SET_IDEAS',
+  ideas
+})
+
+//export const startSetIdeas
+export const startSetIdeas = () => {
+  return (dispatch) => {
+    return database.ref('ideas').once('value').then((snapshot) => {
+      const ideas = [];
+      snapshot.forEach((childSnapshot) => {
+        ideas.push({
+          id: childSnapshot.key,
+          ...childSnapshot.val()
+        })
+      });
+      dispatch(setIdeas(ideas));
+    })
+  }
+};
+
