@@ -1,6 +1,6 @@
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const { webpack } = require('webpack');
+const webpack = require('webpack');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -48,6 +48,7 @@ module.exports = (env) => {
       }]
     },
     plugins: [
+
       CSSExtract,
       new webpack.DefinePlugin({
         'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
@@ -66,6 +67,7 @@ module.exports = (env) => {
     }
   }
 };
+
 
 console.log(path.join(__dirname, 'public'))
 
