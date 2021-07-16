@@ -17,7 +17,7 @@ export const startAddIdea = (ideaData = {}) => {
     const idea = { title, text }
     database.ref('ideas').push(idea).then((ref) => {
       dispatch(addIdea({
-        id: ref.id,
+        id: ref.key,
         ...idea
       }))
     })

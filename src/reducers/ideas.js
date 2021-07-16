@@ -4,7 +4,7 @@ export default (state = defaultIdeasState, action) => {
     case 'ADD_IDEA':
       return [
         ...state,
-        action.ideas
+        action.idea
       ]
     default:
       return state
