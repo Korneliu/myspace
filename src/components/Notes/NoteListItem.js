@@ -7,7 +7,7 @@ import { removeNote } from '../../actions/notes';
 const NoteListItem = ({ dispatch, id, description, text }) => (
   <div>
     <Link to={`/editnote/${id}`}>
-      <h3>{description}</h3>
+      <h2>{description}</h2>
     </Link>
     <p>{text}</p>
     <button onClick={() => {
