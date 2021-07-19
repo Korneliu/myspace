@@ -41,6 +41,7 @@ export const startSetIdeas = () => {
           ...childSnapshot.val()
         })
       });
+      console.log(ideas[0].title);
       dispatch(setIdeas(ideas));
     })
   }

@@ -1,12 +1,11 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import moment from 'moment';
 
 
 
 const MySpaceDashboard = () => (
-  <div>
-    <h1>MySpaceDashboard</h1>
+  <div className="dashboard-layout">
+    <h1>My Personal Space</h1>
     <p></p>
     <Navbar />
 
