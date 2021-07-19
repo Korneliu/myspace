@@ -5,9 +5,9 @@ import { NavLink } from 'react-router-dom';
 import IdeaListItem from './IdeaListItem';
 
 const QuotesIdeas = (props) => (
-  <div className='light'>
-    <Navbar />
+  <div className='quotesideas-layout'>
     <h1>Quotes & Ideas</h1>
+    <Navbar />
     <NavLink to="/createidea" activeClassName="is-active">Create Idea</NavLink>
     {
       props.ideas.map((idea) => {
