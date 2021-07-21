@@ -5,18 +5,18 @@ import Navbar from './Navbar';
 const now = new Date();
 
 const hour = now.getHours();
-const minute = now.getMinutes();
 
-let combine = hour + minute;
+const minute = now.getMinutes();
 let timeElement = '';
-const total = combine => {
-  if (combine > 53 && combine < 50) {
-    timeElement = `and it's daytime!`
+
+const timeChecker = time => {
+  if (time > 5 && time < 20) {
+    timeElement = ` and it's daytime!`
   } else {
     timeElement = ` and it's a nightime!`
   }
 }
-total(combine);
+timeChecker(hour);
 
 
 
