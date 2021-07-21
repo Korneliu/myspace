@@ -18,12 +18,16 @@ const total = combine => {
 
 total(combine);
 
+const add = (a, b) => {
+  return a + b
+}
+add(2, 3)
 const MySpaceDashboard = () => (
   <div className="dashboard-layout">
     <h1>My Personal Space</h1>
     <Navbar />
     <h2 className="dashboard-time">{timeElement}</h2>
-
+    <h5>{add}</h5>
   </div>
 );
 

@@ -8,7 +8,7 @@ const QuotesIdeas = (props) => (
   <div className='quotesideas-layout'>
     <h1>Quotes & Ideas</h1>
     <Navbar />
-    <NavLink to="/createidea" activeClassName="is-active">Create Idea</NavLink>
+    <NavLink to="/createidea" activeClassName="is-active" id="create-idea-link">Create Idea</NavLink>
     {
       props.ideas.map((idea) => {
         return <IdeaListItem key={idea.id}{...idea} />
