@@ -10,9 +10,9 @@ let combine = hour + minute;
 let timeElement = '';
 const total = combine => {
   if (combine > 53 && combine < 50) {
-    timeElement = 'Its a daytime';
+    timeElement = `It's ${hour} and ${minute} and it's daytime!`
   } else {
-    timeElement = 'It is a nightime!'
+    timeElement = `It's ${hour}h${minute}m and it's a nightime!`
   }
 }
 
