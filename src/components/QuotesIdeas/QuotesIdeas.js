@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import IdeaListItem from './IdeaListItem';
 
+
 const QuotesIdeas = (props) => (
   <div className='quotesideas-layout'>
     <h1>Quotes & Ideas</h1>
@@ -17,6 +18,8 @@ const QuotesIdeas = (props) => (
 
   </div>
 );
+
+
 
 const mapStateToProps = (state) => {
   return {
