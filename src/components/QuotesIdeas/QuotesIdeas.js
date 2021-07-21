@@ -14,6 +14,7 @@ const QuotesIdeas = (props) => (
         return <IdeaListItem key={idea.id}{...idea} />
       })
     }
+
   </div>
 );
 
@@ -26,3 +27,21 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps)(QuotesIdeas)
 
 
+
+
+/*   < button onClick = {() => {
+  console.log(props.ideas[3])
+  props.ideas.map((idea) => {
+    return <IdeaListItem key={idea.id}{...idea} />
+  })
+}}> Generate Idea</button > */
+
+// <button onClick={() => {
+    //   console.log(props.ideas[3])
+    //   let title = props.ideas.text
+    //   console.log(title)
+
+    //   props.ideas.map((idea) => {
+    //     return
+    //   })
+    // }}>Generate Idea</button>

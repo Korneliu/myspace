@@ -21,6 +21,7 @@ store.dispatch(addNote({ description: 'Spread', text: 'read about spread operato
 console.log(store.getState());
 
 
+
 const jsx = (
   <Provider store={store}>
     <AppRouter />

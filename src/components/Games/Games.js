@@ -4,7 +4,7 @@ import Navbar from '../Navbar';
 const Games = () => (
   <div>
     <Navbar />
-    <h1>Games</h1>
+    <h1>Work in progress...</h1>
   </div>
 );
 
