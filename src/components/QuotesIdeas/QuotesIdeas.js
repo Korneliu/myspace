@@ -3,6 +3,7 @@ import Navbar from '../Navbar';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import IdeaListItem from './IdeaListItem';
+import ideas from '../../reducers/ideas';
 
 
 const QuotesIdeas = (props) => (
@@ -10,6 +11,7 @@ const QuotesIdeas = (props) => (
     <h1>Quotes & Ideas</h1>
     <Navbar />
     <NavLink to="/createidea" activeClassName="is-active" id="create-idea-link">Create Idea</NavLink>
+
     {
       props.ideas.map((idea) => {
         return <IdeaListItem key={idea.id}{...idea} />
@@ -19,8 +21,6 @@ const QuotesIdeas = (props) => (
   </div>
 );
 
-
-
 const mapStateToProps = (state) => {
   return {
     ideas: state.ideas
@@ -29,7 +29,11 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps)(QuotesIdeas)
 
-
+// {
+//   props.ideas.map((idea) => {
+//     return <IdeaListItem key={idea.id}{...idea} />
+//   })
+// }
 
 
 /*   < button onClick = {() => {

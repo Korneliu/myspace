@@ -3,12 +3,9 @@ import Navbar from './Navbar';
 
 
 const now = new Date();
-
 const hour = now.getHours();
-
 const minute = now.getMinutes();
 let timeElement = '';
-
 const timeChecker = time => {
   if (time > 5 && time < 20) {
     timeElement = ` and it's daytime!`
@@ -17,7 +14,6 @@ const timeChecker = time => {
   }
 }
 timeChecker(hour);
-
 
 
 const MySpaceDashboard = () => (

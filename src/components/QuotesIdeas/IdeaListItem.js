@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const IdeaListItem = ({ id, title, text }) => (
+const IdeaListItem = ({ title, text }) => (
   <div>
     <h2>{title}</h2>
     <h4>{text}</h4>
