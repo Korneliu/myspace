@@ -13,13 +13,14 @@ export class AddIdeaPage extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div className="add-idea-page">
         <h1>Add Idea</h1>
         <Navbar />
         <IdeaForm
           onSubmit={this.onSubmit}
         />
       </div>
+
     )
   }
 };

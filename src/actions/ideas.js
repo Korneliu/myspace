@@ -35,6 +35,7 @@ export const startSetIdeas = () => {
   return (dispatch) => {
     return database.ref('ideas').once('value').then((snapshot) => {
       const ideas = [];
+      console.log(ideas)
       snapshot.forEach((childSnapshot) => {
         ideas.push({
           id: childSnapshot.key,

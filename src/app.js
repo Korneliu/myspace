@@ -21,13 +21,11 @@ store.dispatch(addNote({ description: 'Spread', text: 'read about spread operato
 console.log(store.getState());
 
 
-
 const jsx = (
   <Provider store={store}>
     <AppRouter />
   </Provider>
 )
-
 
 
 ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));

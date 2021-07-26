@@ -11,12 +11,18 @@ const QuotesIdeas = (props) => (
     <h1>Quotes & Ideas</h1>
     <Navbar />
     <NavLink to="/createidea" activeClassName="is-active" id="create-idea-link">Create Idea</NavLink>
-
-    {
-      props.ideas.map((idea) => {
-        return <IdeaListItem key={idea.id}{...idea} />
-      })
-    }
+    <div>
+      <h3>Ideas</h3>
+      {
+        props.ideas.map((idea) => {
+          return <IdeaListItem key={idea.id}{...idea} />
+        })
+      }
+    </div>
+    <div>
+      <NavLink to="/createquote" activeClassName="is-active" id="create-quote-link">Create Quote</NavLink>
+      <h2>Quotes</h2>
+    </div>
 
   </div>
 );

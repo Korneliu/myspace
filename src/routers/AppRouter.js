@@ -5,6 +5,7 @@ import MySpaceDashboard from '../components/MySpaceDashboard';
 import NotFoundPage from '../components/NotFoundPage';
 import AddNotePage from '../components/Notes/AddNotePage';
 import AddIdeaPage from '../components/QuotesIdeas/AddIdeaPage';
+import AddQuotePage from '../components/QuotesIdeas/AddQuotePage';
 import EditNotePage from '../components/Notes/EditNotePage';
 import QuotesIdeas from '../components/QuotesIdeas/QuotesIdeas';
 import Games from '../components/Games/Games';
@@ -18,6 +19,7 @@ const AppRouter = () => (
         <Route path="/notes" component={Notes} />
         <Route path="/createnote" component={AddNotePage} />
         <Route path="/createidea" component={AddIdeaPage} />
+        <Route path="/createquote" component={AddQuotePage} />
         <Route path="/editnote/:id" component={EditNotePage} />
         <Route path="/quotesideas" component={QuotesIdeas} />
         <Route path="/games" component={Games} />
