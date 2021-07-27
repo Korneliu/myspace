@@ -5,7 +5,6 @@ import IdeaForm from './IdeaForm';
 import { startAddIdea } from '../../actions/ideas';
 
 
-
 export class AddIdeaPage extends React.Component {
   onSubmit = (idea) => {
     this.props.startAddIdea(idea);

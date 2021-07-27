@@ -1,4 +1,6 @@
 .quotesideas-layout {
+  display: flex;
+  flex-direction: column;
   background: url('/images/road.jpg');
   background-size: cover;
   width: 100vw;
@@ -23,10 +25,42 @@
 
 #create-idea-link {
   color: white;
-  font-weight: 800;
-  font-size: 1.3em
+  font-weight: 700;
+  font-size: 1.1em
 }
 
 .add-idea-page {
   background-color:lightseagreen;
+}
+
+.ideas-quotes {
+  display: flex;
+
+}
+.ideas {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ideas h3 {
+  color: white;
+  font-size: 2em;
+}
+
+.quotes {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.quotes h3 {
+  color: white;
+  font-size: 2em;
+
+}
+.quotes a {
+  color: white;
+  font-weight: 700;
+  font-size: 1.1em
 }
