@@ -4,9 +4,9 @@ export default class QuoteForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: props.title ? props.title.text : '',
-      author: props.author ? props.author.text : '',
-      date: date
+      title: props.title ? props.quote.title : '',
+      text: props.text ? props.quote.text : '',
+      author: props.author ? props.quote.author : ''
     }
   }
   onTitleChange = (e) => {
@@ -20,12 +20,12 @@ export default class QuoteForm extends React.Component {
   render() {
     return (
       <div>
-        <Form>
+        <form>
           <input
             type="title"
             placeholder="Type title"
             autoFocus
-            onChange={onTitleChange}
+            onChange={this.onTitleChange}
           />
           <input
             type="text"
@@ -33,7 +33,8 @@ export default class QuoteForm extends React.Component {
             autoFocus
             onChange={this.onTextChange}
           />
-        </Form>
+          <button>Submit</button>
+        </form>
       </div>
     )
   }

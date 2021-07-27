@@ -5,7 +5,7 @@ import MySpaceDashboard from '../components/MySpaceDashboard';
 import NotFoundPage from '../components/NotFoundPage';
 import AddNotePage from '../components/Notes/AddNotePage';
 import AddIdeaPage from '../components/QuotesIdeas/AddIdeaPage';
-import AddQuotePage from '../components/QuotesIdeas/AddQuotePage';
+import { AddQuotePage } from '../components/QuotesIdeas/AddQuotePage';
 import EditNotePage from '../components/Notes/EditNotePage';
 import QuotesIdeas from '../components/QuotesIdeas/QuotesIdeas';
 import Games from '../components/Games/Games';

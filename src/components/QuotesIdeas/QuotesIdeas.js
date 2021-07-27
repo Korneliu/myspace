@@ -3,7 +3,6 @@ import Navbar from '../Navbar';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import IdeaListItem from './IdeaListItem';
-import ideas from '../../reducers/ideas';
 
 
 const QuotesIdeas = (props) => (

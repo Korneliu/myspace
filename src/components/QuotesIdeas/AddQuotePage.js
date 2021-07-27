@@ -1,9 +1,13 @@
 import React from 'react';
+import Navbar from '../Navbar';
 
-const AddQuotePage = () => (
-  <div>
-    <h1>Add Quote Page</h1>
-  </div>
-)
-
-export default AddQuotePage;
+export class AddQuotePage extends React.Component {
+  render() {
+    return (
+      <div className="add-quote-page">
+        <h1>Add Quote</h1>
+        <Navbar />
+      </div>
+    )
+  }
+}

@@ -4,7 +4,7 @@ export default class IdeaForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: props.idea ? props.idea.text : '',
+      text: props.text ? props.idea.text : '',
       title: props.title ? props.idea.title : ''
     }
   }
