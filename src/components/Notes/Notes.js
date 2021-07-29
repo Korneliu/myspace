@@ -12,7 +12,7 @@ const Notes = (props) => (
       <Navbar />
       <NavLink to='/createnote' activeClassName="is-active">Create Note</NavLink>
     </div>
-    <div>
+    <div className="note-list">
       {
         props.notes.map((note) => {
           return <NoteListItem key={note.id}{...note} />
