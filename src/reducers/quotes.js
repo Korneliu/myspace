@@ -1,11 +1,11 @@
-
+/*
 const quotesDefaultState = [];
 export default (state = quotesDefaultState, action) => {
   switch (action.type) {
-    case 'ADD_QUOTE':
+    case 'Add_Quote':
       return [
         ...state,
-        action.quote
+        state.quote
       ]
   }
-}
+} */
