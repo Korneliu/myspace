@@ -1,4 +1,4 @@
-
+// Quotes
 const quotesDefaultState = []
 export default (state = quotesDefaultState, action) => {
   switch (action.type) {
@@ -7,6 +7,8 @@ export default (state = quotesDefaultState, action) => {
         ...state,
         action.quotes
       ]
+    case 'REMOVE_QUOTE':
+      return state.filter(({ id }) => !id === action.id);
     default:
       return state;
   };
