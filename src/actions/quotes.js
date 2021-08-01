@@ -7,7 +7,7 @@ export const addQuote = ({
   author = ''
 } = {}) => ({
   type: 'ADD_QUOTE',
-  quotes: {
+  quote: {
     id: uuidv4(),
     title,
     text,
@@ -20,3 +20,10 @@ export const removeQuote = ({ id } = {}) => ({
   type: 'REMOVE_QUOTE',
   id
 });
+
+// EDIT_QUOTE
+export const editQuote = (id, updates) => ({
+  type: 'EDIT_QUOTE',
+  id,
+  updates
+})

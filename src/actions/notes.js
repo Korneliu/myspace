@@ -7,7 +7,7 @@ export const addNote = (
   } = {}) =>
 ({
   type: 'ADD_NOTE',
-  notes: {
+  note: {
     id: uuidv4(),
     description,
     text

@@ -5,10 +5,21 @@ export default (state = quotesDefaultState, action) => {
     case 'ADD_QUOTE':
       return [
         ...state,
-        action.quotes
+        action.quote
       ]
     case 'REMOVE_QUOTE':
       return state.filter(({ id }) => !id === action.id);
+    case 'EDIT_QUOTE':
+      return state.map((quote) => {
+        if (quote.id === action.id) {
+          return {
+            ...quote,
+            ...action.updates
+          }
+        } else {
+          return quote;
+        }
+      })
     default:
       return state;
   };

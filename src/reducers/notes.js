@@ -5,7 +5,7 @@ export default (state = notesReducerDefaultState, action) => {
     case 'ADD_NOTE':
       return [
         ...state,
-        action.notes
+        action.note
       ]
     case 'REMOVE_NOTE':
       return state.filter(({ id }) => id !== action.id);
