@@ -3,6 +3,7 @@ import Navbar from '../Navbar';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import IdeaListItem from './IdeaListItem';
+import QuotesList from './QuotesList';
 
 
 const QuotesIdeas = (props) => (
@@ -21,8 +22,9 @@ const QuotesIdeas = (props) => (
         }
       </div>
       <div className="quotes">
-        <h3>Quotes</h3>
+
         <NavLink to="/createquote" activeClassName="is-active" id="create-quote-link">Create Quote</NavLink>
+        <QuotesList />
       </div>
 
 

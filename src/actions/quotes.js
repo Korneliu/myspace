@@ -21,6 +21,7 @@ export const removeQuote = ({ id } = {}) => ({
   id
 });
 
+
 // EDIT_QUOTE
 export const editQuote = (id, updates) => ({
   type: 'EDIT_QUOTE',

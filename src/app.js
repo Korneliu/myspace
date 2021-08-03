@@ -22,6 +22,10 @@ store.subscribe(() => {
 
 const noteOne = store.dispatch(addNote({ description: 'Map', text: 'read about map method' }))
 const noteTwo = store.dispatch(addNote({ description: 'Spread Operator', text: 'read about map method' }))
+store.dispatch(addNote({ description: 'ForEach', text: 'Learn ForEach method' }));
+store.dispatch(addNote({ description: 'Object literal', text: 'Read about Object literals' }));
+store.dispatch(addNote({ description: 'Sort Method', text: 'Practice Sort method' }));
+
 const quoteOne = store.dispatch(addQuote({ title: 'Social', text: 'I argue' }));
 const quoteTwo = store.dispatch(addQuote({ title: 'quoteTwo', text: 'QuoteTwo text' }));
 /* const quote1 = store.dispatch(removeQuote({ id: "dd1fefa4 - 10c5- 446c - 927b - caccc572de69" })) */
@@ -42,3 +46,4 @@ ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
 store.dispatch(startSetIdeas()).then(() => {
   ReactDOM.render(jsx, document.getElementById('app'));
 })
+
