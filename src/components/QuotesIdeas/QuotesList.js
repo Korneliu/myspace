@@ -1,10 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import QuoteListItem from './QuoteListItem';
 
 const QuoteList = (props) => (
   <div>
     <h1>Quotes List</h1>
-    {props.quotes.length}
+    {
+      props.quotes.map((quote) => {
+        return <QuoteListItem key={quote.id}{...quote} />
+      })
+    }
+
   </div>
 );
 

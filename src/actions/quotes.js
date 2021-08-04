@@ -13,7 +13,7 @@ export const addQuote = ({
     text,
     author
   }
-})
+});
 
 //REMOVE_QUOTE
 export const removeQuote = ({ id } = {}) => ({

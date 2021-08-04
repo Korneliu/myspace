@@ -9,8 +9,6 @@ export default (state = quotesDefaultState, action) => {
       ]
     case 'REMOVE_QUOTE':
       return state.filter(({ id }) => !id === action.id);
-    case 'REMOVE_QUOTE':
-      return state.filter(({ id }) => !id === action.id);
     case 'EDIT_QUOTE':
       return state.map((quote) => {
         if (quote.id === action.id) {
@@ -26,4 +24,3 @@ export default (state = quotesDefaultState, action) => {
       return state;
   };
 };
-
