@@ -5,15 +5,13 @@ import QuoteForm from './QuoteForm';
 import { addQuote } from '../../actions/quotes';
 
 const AddQuotePage = (props) => (
-
   <div className="add-quote-page">
     <h1>Add Quote</h1>
     <Navbar />
     <QuoteForm
       onSubmit={(quote) => {
-        props.dispatch(addQuote(quote))
-        console.log(quote)
-        props.history.push('/quotesideas')
+        props.dispatch(addQuote(quote));
+        props.history.push('/quotesideas');
       }}
     />
   </div>

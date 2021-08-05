@@ -26,11 +26,7 @@ const QuotesIdeas = (props) => (
         <NavLink to="/createquote" activeClassName="is-active" id="create-quote-link">Create Quote</NavLink>
         <QuotesList />
       </div>
-
-
-
     </div>
-
   </div>
 );
 

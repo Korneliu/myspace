@@ -7,6 +7,6 @@ const QuoteListItem = ({ title, text, author }) => (
     <p>{text}</p>
     <p>{author}</p>
   </div>
-)
+);
 
 export default QuoteListItem;

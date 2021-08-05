@@ -9,19 +9,19 @@ export default class QuoteForm extends React.Component {
       author: props.author ? props.quote.author : '',
       error: ''
     }
-  }
+  };
   onTitleChange = (e) => {
     const title = e.target.value;
     this.setState(() => ({ title }));
-  }
+  };
   onTextChange = (e) => {
     const text = e.target.value;
     this.setState(() => ({ text }));
-  }
+  };
   onAuthorChange = (e) => {
     const author = e.target.value;
     this.setState(() => ({ author }))
-  }
+  };
   onSubmit = (e) => {
     e.preventDefault();
     if (!this.state.title || !this.state.text) {
@@ -33,8 +33,8 @@ export default class QuoteForm extends React.Component {
         text: this.state.text,
         author: this.state.author
       })
-    }
-  }
+    };
+  };
   render() {
     return (
       <div>
@@ -64,7 +64,7 @@ export default class QuoteForm extends React.Component {
         </form>
       </div>
     )
-  }
-}
+  };
+};
 
 

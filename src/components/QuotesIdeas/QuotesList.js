@@ -5,11 +5,11 @@ import QuoteListItem from './QuoteListItem';
 const QuoteList = (props) => (
   <div>
     <h1>Quotes List</h1>
-    {
-      props.quotes.map((quote) => {
-        return <QuoteListItem key={quote.id}{...quote} />
-      })
-    }
+
+    <p>{props.quotes[0].title}</p>
+
+    <p>{props.quotes[0].text}</p>
+
 
   </div>
 );
@@ -21,4 +21,5 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(QuoteList);
+//return <QuoteListItem key={quote.id}{...quote} />
 
