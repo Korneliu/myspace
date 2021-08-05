@@ -6,6 +6,7 @@ import IdeaListItem from './IdeaListItem';
 import QuotesList from './QuotesList';
 
 
+
 const QuotesIdeas = (props) => (
   <div className='quotesideas-layout'>
     <h1>Quotes & Ideas</h1>
