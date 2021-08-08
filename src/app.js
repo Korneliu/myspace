@@ -16,7 +16,6 @@ const store = configureStore();
 
 store.subscribe(() => {
   console.log(store.getState());
-
 })
 
 
@@ -26,8 +25,8 @@ store.dispatch(addNote({ description: 'ForEach', text: 'Learn ForEach method' })
 store.dispatch(addNote({ description: 'Object literal', text: 'Read about Object literals' }));
 store.dispatch(addNote({ description: 'Sort Method', text: 'Practice Sort method' }));
 
-const quoteOne = store.dispatch(addQuote({ title: 'QuoteOne', text: 'QuoteOne text' }));
-const quoteTwo = store.dispatch(addQuote({ title: 'QuoteTwo', text: 'QuoteTwo text' }));
+store.dispatch(addQuote({ title: 'QuoteOne', text: 'QuoteOne text' }));
+store.dispatch(addQuote({ title: 'QuoteTwo', text: 'QuoteTwo text' }));
 /* const quote1 = store.dispatch(removeQuote({ id: "dd1fefa4 - 10c5- 446c - 927b - caccc572de69" })) */
 
 //store.dispatch(editQuote(quoteOne.quote.id, { title: 'Whatever' }));

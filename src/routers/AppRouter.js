@@ -22,7 +22,6 @@ const AppRouter = () => (
         <Route path="/createquote" component={AddQuotePage} />
         <Route path="/editnote/:id" component={EditNotePage} />
         <Route path="/quotesideas" component={QuotesIdeas} />
-        <Route path="/games" component={Games} />
         <Route path="/code" component={Code} />
         <Route component={NotFoundPage} />
       </Switch>

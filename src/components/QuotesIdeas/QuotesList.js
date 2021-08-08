@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import QuoteListItem from './QuoteListItem';
-import IdeaListItem from './IdeaListItem';
 
 
 class QuoteList extends React.Component {
+
   constructor(props) {
     super(props)
+    this.handleClick = this.handleClick.bind(this)
     this.state = {
       title: '',
       text: '',
@@ -20,12 +21,11 @@ class QuoteList extends React.Component {
     let quoteTitle = quoteObject.title
     let quoteText = quoteObject.text
     let quoteAuthor = quoteObject.author
-    this.setState(() => ({ title: quoteTitle, text: quoteText, author: quoteAuthor }))
+    this.setState(() => ({ title: quoteTitle, text: quoteText, author: quoteAuthor }));
   };
   render() {
     return (
       <div>
-        <h1>Quotes from class component</h1>
         <button onClick={this.handleClick}>Generate Random Quote</button>
         <h3>{this.state.title}</h3>
         <p>{this.state.text}</p>
@@ -44,10 +44,7 @@ export default connect(mapStateToProps)(QuoteList);
 
 // const QuoteList = (props) => (
 //   <div>
-//     <h1>Quotes List</h1>
-//     <p>{props.quotes[0].title}</p>
-//     <p>{props.quotes[0].text}</p>
-
+//     <QuoteListItem />
 //   </div>
 // );
 

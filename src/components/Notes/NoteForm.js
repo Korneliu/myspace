@@ -10,7 +10,6 @@ export default class NoteForm extends React.Component {
       error: ''
     }
   }
-
   onDescriptionChange = (e) => {
     const description = e.target.value;
     this.setState(() => ({ description }))
