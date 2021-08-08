@@ -17,7 +17,7 @@ const EditNotePage = (props) => {
       />
     </div>
   )
-}
+};
 
 const mapStateToProps = (state, props) => {
   return {

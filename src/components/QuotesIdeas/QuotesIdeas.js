@@ -34,9 +34,9 @@ const mapStateToProps = (state) => {
   return {
     ideas: state.ideas
   }
-}
+};
 
-export default connect(mapStateToProps)(QuotesIdeas)
+export default connect(mapStateToProps)(QuotesIdeas);
 
 // {
 //   props.ideas.map((idea) => {
