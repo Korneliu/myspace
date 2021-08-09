@@ -69,6 +69,17 @@
   flex-direction: column;
   background-color: burlywood;
 }
-.editquotepage {
-  background-color: burlywood;
+.quote-title {
+  color: white;
+  font-weight: 800;
+  text-align: center;
+}
+.quote-text {
+  color: white;
+  font-weight: 800;
+}
+.quote-author {
+  color: white;
+  font-style: italic;
+  text-align: right;
 }

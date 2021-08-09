@@ -4,7 +4,6 @@ import QuoteListItem from './QuoteListItem';
 
 
 class QuoteList extends React.Component {
-
   constructor(props) {
     super(props)
     this.handleClick = this.handleClick.bind(this)
@@ -16,8 +15,10 @@ class QuoteList extends React.Component {
   };
   handleClick = (e) => {
     e.preventDefault();
-    console.log(this.props.quotes.length)
-    let quoteObject = this.props.quotes[0]
+    let propLength = this.props.quotes.length;
+    let randomNumber = Math.floor(Math.random() * propLength)
+    console.log(randomNumber)
+    let quoteObject = this.props.quotes[randomNumber]
     let quoteTitle = quoteObject.title
     let quoteText = quoteObject.text
     let quoteAuthor = quoteObject.author
@@ -26,10 +27,10 @@ class QuoteList extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}>Generate Random Quote</button>
-        <h3>{this.state.title}</h3>
-        <p>{this.state.text}</p>
-        <p>{this.state.author}</p>
+        <button className="generate-random-quote-button" onClick={this.handleClick}>Generate Random Quote</button>
+        <h3 className='quote-title'>{this.state.title}</h3>
+        <p className='quote-text'>{this.state.text}</p>
+        <p className='quote-author'>{this.state.author}</p>
       </div>
     )
   }
