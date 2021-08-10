@@ -28,9 +28,9 @@ class QuoteList extends React.Component {
     return (
       <div className="quotes-list">
         <button className="generate-random-quote-button" onClick={this.handleClick}>Generate Random Quote</button>
-        <h3 className='quote-title'>{this.state.title}</h3>
-        <p className='quote-text'>{this.state.text}</p>
-        <p className='quote-author'>{this.state.author}</p>
+        <h3 className="quote-title">{this.state.title}</h3>
+        <p className="quote-text">{this.state.text}</p>
+        <p className="quote-author">{this.state.author}</p>
       </div>
     )
   }

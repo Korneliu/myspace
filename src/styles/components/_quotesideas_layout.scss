@@ -85,13 +85,14 @@
 .quote-author {
   color: white;
   font-style: italic;
-  text-align: right;
+  margin-left: 26em;
 }
+
 
 .quotes-list {
   display: flex;
   align-items: center;
   flex-direction: column;
-  
+  margin-right: 2em;
 }
 
