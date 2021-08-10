@@ -42,6 +42,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 2em;
 }
 .ideas h3 {
   color: white;
@@ -53,6 +54,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  margin-left: 2em;
 }
 .quotes h3 {
   color: white;
@@ -62,7 +65,8 @@
 .quotes a {
   color: white;
   font-weight: 700;
-  font-size: 1.1em
+  font-size: 1.1em;
+  margin-bottom: 2em;
 }
 .add-quote-page {
   display: flex;
@@ -76,10 +80,18 @@
 }
 .quote-text {
   color: white;
-  font-weight: 800;
+  font-weight: 600;
 }
 .quote-author {
   color: white;
   font-style: italic;
   text-align: right;
 }
+
+.quotes-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+

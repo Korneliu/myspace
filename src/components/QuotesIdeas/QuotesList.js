@@ -26,7 +26,7 @@ class QuoteList extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div className="quotes-list">
         <button className="generate-random-quote-button" onClick={this.handleClick}>Generate Random Quote</button>
         <h3 className='quote-title'>{this.state.title}</h3>
         <p className='quote-text'>{this.state.text}</p>
