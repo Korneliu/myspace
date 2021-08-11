@@ -13,6 +13,11 @@ const QuotesIdeas = (props) => (
     <Navbar />
 
     <div className="ideas-quotes">
+      <div className="quotes">
+        <h3>Quotes</h3>
+        <NavLink to="/createquote" activeClassName="is-active" id="create-quote-link">Create Quote</NavLink>
+        <QuotesList />
+      </div>
       <div className="ideas">
         <h3>Ideas</h3>
         <NavLink to="/createidea" activeClassName="is-active" id="create-idea-link">Create Idea</NavLink>
@@ -21,11 +26,6 @@ const QuotesIdeas = (props) => (
             return <IdeaListItem key={idea.id}{...idea} />
           })
         }
-      </div>
-      <div className="quotes">
-        <h3>Quotes</h3>
-        <NavLink to="/createquote" activeClassName="is-active" id="create-quote-link">Create Quote</NavLink>
-        <QuotesList />
       </div>
     </div>
   </div>

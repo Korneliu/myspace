@@ -4,50 +4,52 @@
   background: url('/images/road.jpg');
   background-size: cover;
   width: 100vw;
-}
+};
+
 .quotesideas-layout h1 {
   text-align: center;
   color: white;
   letter-spacing: 0.2em; 
   padding-top: 0.5em;
   margin-top: 0;
-}
+};
 
 .quotesideas-layout h2 {
   color:white;
   text-align: center; 
-}
+};
 
 .quotesideas-layout h4 {
   text-align: center;
   color:white;
-}
+};
 
 #create-idea-link {
   color: white;
   font-weight: 700;
   font-size: 1.1em
-}
+};
 
 .add-idea-page {
   background-color:lightseagreen;
-}
+};
 
 .ideas-quotes {
   display: flex;
+};
 
-}
 .ideas {
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 2em;
-}
+};
+
 .ideas h3 {
   color: white;
   font-size: 2em;
-}
+};
 
 .quotes {
   width: 50%;
@@ -56,44 +58,54 @@
   align-items: center;
   justify-content: flex-start;
   margin-left: 2em;
-}
+};
+
 .quotes h3 {
   color: white;
   font-size: 2em;
+};
 
-}
 .quotes a {
   color: white;
   font-weight: 700;
   font-size: 1.1em;
   margin-bottom: 2em;
-}
+};
+
 .add-quote-page {
   display: flex;
   flex-direction: column;
   background-color: burlywood;
-}
+};
+
 .quote-title {
   color: white;
   font-weight: 800;
   text-align: center;
-}
+};
+
 .quote-text {
   color: white;
   font-weight: 600;
   line-height: 1.3;
-}
+};
+
 .quote-author {
   color: white;
   font-style: italic;
   margin-left: 26em;
-}
-
+};
 
 .quotes-list {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-right: 2em;
-}
+};
 
+@media screen and (max-width: 600px) {
+  .ideas-quotes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
