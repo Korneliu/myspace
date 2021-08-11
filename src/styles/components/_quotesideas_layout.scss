@@ -38,7 +38,7 @@
 };
 
 .ideas {
-  width: 45%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,7 +50,7 @@
 };
 
 .quotes {
-  width: 45%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,7 +103,14 @@
 @media screen and (max-width: 600px) {
   .ideas-quotes {
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    align-items:center; 
+  };
+  
+  .quote-text {
+    margin-left: 8em;
+    margin-right: 5em;
   }
-}
+  .quote-author {
+    margin-right: 6em;
+  } 
+};
