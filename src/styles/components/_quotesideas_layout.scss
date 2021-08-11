@@ -3,7 +3,6 @@
   flex-direction: column;
   background: url('/images/road.jpg');
   background-size: cover;
-  width: 100vw;
 };
 
 .quotesideas-layout h1 {
@@ -39,11 +38,10 @@
 };
 
 .ideas {
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 2em;
 };
 
 .ideas h3 {
@@ -52,12 +50,11 @@
 };
 
 .quotes {
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-left: 2em;
 };
 
 .quotes h3 {
@@ -107,5 +104,6 @@
   .ideas-quotes {
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
   }
 }
