@@ -39,10 +39,11 @@ body {
 
 .ideas-quotes {
   display: flex;
+  justify-content: space-between;
 };
 
 .ideas {
-  width: 50%;
+  width: 47%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,6 +55,7 @@ body {
 };
 
 .quotes {
+  width: 47%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,18 +103,17 @@ body {
   align-items: center;
   flex-direction: column;
 };
-
+ 
 .generate-random-quote-button {
   background-color: white;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 600px) {
   .ideas-quotes {
     flex-direction: column;
     align-items:center; 
   };
   .quote-text {
-    margin-top: 0px;
     margin-right: 6em;
     margin-left: 6em;
   }
@@ -120,6 +121,6 @@ body {
     margin-right: 7em;
   } 
   .ideas {
-    width: 90%;
+    width: 100%;
   }
 };
