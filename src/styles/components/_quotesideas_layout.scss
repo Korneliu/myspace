@@ -1,3 +1,7 @@
+body {
+  margin: 0 auto;
+}
+
 .quotesideas-layout {
   display: flex;
   flex-direction: column;
@@ -50,7 +54,6 @@
 };
 
 .quotes {
-  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -109,10 +112,14 @@
     align-items:center; 
   };
   .quote-text {
+    margin-top: 0px;
     margin-right: 6em;
     margin-left: 6em;
   }
   .quote-author {
-    margin-right: 6em;
+    margin-right: 7em;
   } 
+  .ideas {
+    width: 90%;
+  }
 };
