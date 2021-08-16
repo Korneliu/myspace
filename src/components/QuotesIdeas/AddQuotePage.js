@@ -2,19 +2,28 @@ import React from 'react';
 import Navbar from '../Navbar';
 import { connect } from 'react-redux';
 import QuoteForm from './QuoteForm';
-import { addQuote } from '../../actions/quotes';
+import { startAddQuote } from '../../actions/quotes';
 
-const AddQuotePage = (props) => (
-  <div className="add-quote-page">
-    <h1>Add Quote</h1>
-    <Navbar />
-    <QuoteForm
-      onSubmit={(quote) => {
-        props.dispatch(addQuote(quote));
-        props.history.push('/quotesideas');
-      }}
-    />
-  </div>
-);
+export class AddQuotePage extends React.Component {
+  onSubmit = (quote) => {
+    this.props.startAddQuote(quote);
+    this.props.history.push('/quotesideas');
+  }
+  render() {
+    return (
+      <div className="add-quote-page">
+        <h1>Add Quote</h1>
+        <Navbar />
+        <QuoteForm
+          onSubmit={this.onSubmit}
+        />
+      </div>
+    )
+  }
+};
 
-export default connect()(AddQuotePage);
+const mapDispatchToProps = (dispatch) => ({
+  startAddQuote: (quote) => dispatch(startAddQuote(quote))
+})
+
+export default connect(undefined, mapDispatchToProps)(AddQuotePage)

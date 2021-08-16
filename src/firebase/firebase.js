@@ -17,20 +17,9 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-database.ref()
-  .once('value')
-  .then((snapshot) => {
-    const val = snapshot.val();
-    console.log(val);
-  })
-  .catch((e) => {
-    console.log('Error fetching data, e')
-  })
-
 
 
 export { firebase, database as default };
-
 
 
 

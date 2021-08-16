@@ -1,3 +1,4 @@
+import { database } from 'firebase';
 import React from 'react';
 import { connect } from 'react-redux';
 import QuoteListItem from './QuoteListItem';
@@ -15,14 +16,15 @@ class QuoteList extends React.Component {
   };
   handleClick = (e) => {
     e.preventDefault();
-    let propLength = this.props.quotes.length;
-    let randomNumber = Math.floor(Math.random() * propLength)
-    console.log(randomNumber)
-    let quoteObject = this.props.quotes[randomNumber]
-    let quoteTitle = quoteObject.title
-    let quoteText = quoteObject.text
-    let quoteAuthor = quoteObject.author
-    this.setState(() => ({ title: quoteTitle, text: quoteText, author: quoteAuthor }));
+    let propLength = quotes.length;
+    console.log(propLength)
+    // let randomNumber = Math.floor(Math.random() * propLength)
+    // console.log(randomNumber)
+    // let quoteObject = props.quotes[randomNumber]
+    // let quoteTitle = quoteObject.title
+    // let quoteText = quoteObject.text
+    // let quoteAuthor = quoteObject.author
+    // this.setState(() => ({ title: quoteTitle, text: quoteText, author: quoteAuthor }));
   };
   render() {
     return (
@@ -57,4 +59,8 @@ export default connect(mapStateToProps)(QuoteList);
 
 // export default connect(mapStateToProps)(QuoteList);
 //return <QuoteListItem key={quote.id}{...quote} /> */
+
+
+
+
 
