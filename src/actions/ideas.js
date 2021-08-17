@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import database from '../firebase/firebase';
 
-// Add Idea
+// ADD_IDEA
 export const addIdea = (idea) => ({
   type: 'ADD_IDEA',
   idea
@@ -30,7 +30,6 @@ export const setIdeas = (ideas) => ({
   ideas
 })
 
-//export const startSetIdeas
 export const startSetIdeas = () => {
   return (dispatch) => {
     return database.ref('ideas').once('value').then((snapshot) => {
@@ -47,3 +46,24 @@ export const startSetIdeas = () => {
   }
 };
 
+export const startGenerateRandomIdea = () => {
+  return (dispatch) => {
+    return database.ref('ideas').once('value').then((snapshot) => {
+
+    })
+  }
+}
+
+// REMOVE_IDEA
+export const removeIdea = ({ id } = {}) => ({
+  type: 'REMOVE_IDEA',
+  id
+});
+
+export const startRemoveExpense = ({ id } = {}) => {
+  return (dispatch) => {
+    return database.ref(`ideas/${id}`).remove().then(() => {
+      dispatch(removeIdea({ id }));
+    })
+  }
+}

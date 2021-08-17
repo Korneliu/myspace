@@ -38,6 +38,7 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(QuotesIdeas);
+//
 
 // {
 //   props.ideas.map((idea) => {

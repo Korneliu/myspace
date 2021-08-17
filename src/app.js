@@ -26,8 +26,6 @@ store.dispatch(addNote({ description: 'Object literal', text: 'Read about Object
 store.dispatch(addNote({ description: 'Sort Method', text: 'Practice Sort method' }));
 
 
-
-
 const jsx = (
   <Provider store={store}>
     <AppRouter />
