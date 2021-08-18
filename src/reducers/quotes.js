@@ -20,6 +20,9 @@ export default (state = quotesDefaultState, action) => {
           return quote;
         }
       })
+    case 'GENERATE_RANDOM_QUOTE':
+      let quotes = state.length
+      console.log(quotes)
     default:
       return state;
   };

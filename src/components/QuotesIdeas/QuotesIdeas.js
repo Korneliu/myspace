@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import IdeaListItem from './IdeaListItem';
 import QuotesList from './QuotesList';
+import { generateRandomQuote } from '../../actions/quotes';
 
 
 

@@ -2,6 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import QuoteListItem from './QuoteListItem';
+import { generateRandomQuote } from '../../actions/quotes';
 
 
 const QuoteList = (props) => {
@@ -9,7 +10,7 @@ const QuoteList = (props) => {
   return (
     <div className="quotes-list">
       <button className="generate-random-quote-button"
-        onClick={() => console.log(props.quotes.length)}>Generate Random Quote</button>
+        onClick={(quote) => { props.dispatch(generateRandomQuote({ quote })) }}>Generate Random Quote</button>
       <h3 className="quote-title"></h3>
       <p className="quote-text"></p>
       <p className="quote-author"></p>
@@ -17,6 +18,9 @@ const QuoteList = (props) => {
   )
 };
 
+<button onClick={() => {
+  dispatch(removeNote({ id }))
+}}>Remove</button>
 
 const mapStateToProps = (state, props) => {
   return {
