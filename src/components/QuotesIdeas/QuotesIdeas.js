@@ -33,7 +33,8 @@ const QuotesIdeas = (props) => (
 
 const mapStateToProps = (state) => {
   return {
-    ideas: state.ideas
+    ideas: state.ideas,
+    quotes: state.quotes
   }
 };
 

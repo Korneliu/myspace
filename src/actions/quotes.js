@@ -37,3 +37,9 @@ export const editQuote = (id, updates) => ({
   id,
   updates
 });
+
+// GENERATE_RANDOM_QUOTE
+export const generateRandomQuote = (quote) => ({
+  type: 'GENERATE_RANDOM_QUOTE',
+  quote
+})
