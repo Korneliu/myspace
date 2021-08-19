@@ -33,15 +33,14 @@ export const setIdeas = (ideas) => ({
 export const startSetIdeas = () => {
   return (dispatch) => {
     return database.ref('ideas').once('value').then((snapshot) => {
-      const ideas = [];
-      console.log(ideas)
-      snapshot.forEach((childSnapshot) => {
-        ideas.push({
-          id: childSnapshot.key,
-          ...childSnapshot.val()
-        })
-      });
-      dispatch(setIdeas(ideas));
+      const val = snapshot.val();
+      let arr = [];
+      snapshot.forEach(childSnapshot => {
+        let item = childSnapshot.val();
+        item.key = childSnapshot.key;
+        arr.push(item)
+      })
+      dispatch(setIdeas(arr[0]));
     })
   }
 };
@@ -67,3 +66,20 @@ export const startRemoveExpense = ({ id } = {}) => {
     })
   }
 }
+
+// database.ref('ideas').once('value').then((snapshot) => {
+//   const val = snapshot.val();
+//   let arr = [];
+//   snapshot.forEach(childSnapshot => {
+//     let item = childSnapshot.val();
+//     item.key = childSnapshot.key;
+//     return arr.push(item)
+//   })
+//   console.log(arr[0])
+// })
+
+/* snapshot.forEach((childSnapshot) => {
+  ideas.push({
+    id: childSnapshot.key,
+    ...childSnapshot.val()
+  }) */

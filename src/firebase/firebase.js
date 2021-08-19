@@ -17,6 +17,18 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
+database.ref('ideas').once('value').then((snapshot) => {
+  const val = snapshot.val();
+  let arr = [];
+  snapshot.forEach(childSnapshot => {
+    let item = childSnapshot.val();
+    item.key = childSnapshot.key;
+    return arr.push(item)
+  })
+  console.log(arr[0])
+})
+
+
 
 
 export { firebase, database as default };

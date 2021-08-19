@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import IdeaListItem from './IdeaListItem';
 import QuotesList from './QuotesList';
 import { generateRandomQuote } from '../../actions/quotes';
+import { startSetIdeas } from '../../actions/ideas';
 
 
 
@@ -17,16 +18,14 @@ const QuotesIdeas = (props) => (
       <div className="quotes">
         <h3>Quotes</h3>
         <NavLink to="/createquote" activeClassName="is-active" id="create-quote-link">Create Quote</NavLink>
-        <QuotesList />
+        <QuotesList
+        />
       </div>
       <div className="ideas">
         <h3>Ideas</h3>
         <NavLink to="/createidea" activeClassName="is-active" id="create-idea-link">Create Idea</NavLink>
-        {
-          props.ideas.map((idea) => {
-            return <IdeaListItem key={idea.id}{...idea} />
-          })
-        }
+        <button className="generate-random-quote-button"
+          onClick={() => { props.dispatch(startSetIdeas({})) }}>Generate Random Quote</button>
       </div>
     </div>
   </div>
@@ -65,3 +64,10 @@ export default connect(mapStateToProps)(QuotesIdeas);
     //     return
     //   })
     // }}>Generate Idea</button>
+
+
+// {
+//   props.ideas.map((idea) => {
+//     return <IdeaListItem key={idea.id}{...idea} />
+//   })
+// }
