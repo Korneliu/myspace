@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import IdeaListItem from './IdeaListItem';
 import QuotesList from './QuotesList';
-import { generateRandomQuote } from '../../actions/quotes';
 import { startSetIdeas } from '../../actions/ideas';
+
 
 
 
@@ -24,8 +24,11 @@ const QuotesIdeas = (props) => (
       <div className="ideas">
         <h3>Ideas</h3>
         <NavLink to="/createidea" activeClassName="is-active" id="create-idea-link">Create Idea</NavLink>
-        <button className="generate-random-quote-button"
-          onClick={() => { props.dispatch(startSetIdeas({})) }}>Generate Random Quote</button>
+        {
+          props.ideas.map((idea) => {
+            return <IdeaListItem key={idea.id}{...idea} />
+          })
+        }
       </div>
     </div>
   </div>
@@ -33,13 +36,12 @@ const QuotesIdeas = (props) => (
 
 const mapStateToProps = (state) => {
   return {
-    ideas: state.ideas,
-    quotes: state.quotes
+    ideas: state.ideas
   }
 };
 
 export default connect(mapStateToProps)(QuotesIdeas);
-//
+
 
 // {
 //   props.ideas.map((idea) => {
@@ -64,10 +66,3 @@ export default connect(mapStateToProps)(QuotesIdeas);
     //     return
     //   })
     // }}>Generate Idea</button>
-
-
-// {
-//   props.ideas.map((idea) => {
-//     return <IdeaListItem key={idea.id}{...idea} />
-//   })
-// }

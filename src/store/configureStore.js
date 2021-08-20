@@ -11,7 +11,7 @@ export default () => {
     combineReducers({
       notes: notesReducer,
       quotes: quotesReducer,
-      ideas: ideasReducer
+      ideas: ideasReducer,
     }),
     composeEnhancers(applyMiddleware(thunk))
   );

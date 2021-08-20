@@ -30,28 +30,31 @@ export const setIdeas = (ideas) => ({
   ideas
 })
 
+//START_SET_IDEAS
 export const startSetIdeas = () => {
   return (dispatch) => {
     return database.ref('ideas').once('value').then((snapshot) => {
-      const val = snapshot.val();
-      let arr = [];
-      snapshot.forEach(childSnapshot => {
-        let item = childSnapshot.val();
-        item.key = childSnapshot.key;
-        arr.push(item)
-      })
-      dispatch(setIdeas(arr[0]));
+      const ideas = [];
+      snapshot.forEach((childSnapshot) => {
+        ideas.push({
+          id: childSnapshot.key,
+          ...childSnapshot.val()
+        })
+      });
+      dispatch(setIdeas(ideas));
     })
   }
 };
 
-export const startGenerateRandomIdea = () => {
-  return (dispatch) => {
-    return database.ref('ideas').once('value').then((snapshot) => {
 
-    })
-  }
-}
+
+// export const startGenerateRandomIdea = () => {
+//   return (dispatch) => {
+//     return database.ref('ideas').once('value').then((snapshot) => {
+
+//     })
+//   }
+// }
 
 // REMOVE_IDEA
 export const removeIdea = ({ id } = {}) => ({
@@ -65,21 +68,38 @@ export const startRemoveExpense = ({ id } = {}) => {
       dispatch(removeIdea({ id }));
     })
   }
-}
+};
 
-// database.ref('ideas').once('value').then((snapshot) => {
-//   const val = snapshot.val();
-//   let arr = [];
-//   snapshot.forEach(childSnapshot => {
-//     let item = childSnapshot.val();
-//     item.key = childSnapshot.key;
-//     return arr.push(item)
-//   })
-//   console.log(arr[0])
-// })
 
-/* snapshot.forEach((childSnapshot) => {
-  ideas.push({
-    id: childSnapshot.key,
-    ...childSnapshot.val()
-  }) */
+
+/*
+export const startSetIdeas = () => {
+  return (dispatch) => {
+    return database.ref('ideas').once('value').then((snapshot) => {
+      const ideas = [];
+      snapshot.forEach((childSnapshot) => {
+        ideas.push({
+          id: childSnapshot.key,
+          ...childSnapshot.val()
+        })
+      });
+      dispatch(setIdeas(ideas));
+    })
+  }
+}; */
+
+// export const startSetIdeas = () => {
+//   return (dispatch) => {
+//     return database.ref('ideas').once('value').then((snapshot) => {
+//       const val = snapshot.val();
+//       const ideas = [];
+//       snapshot.forEach(childSnapshot => {
+//         let item = childSnapshot.val();
+//         item.key = childSnapshot.key;
+//         ideas.push(item)
+//       })
+//       console.log(ideas[0])
+//       dispatch(setIdeas(ideas[0]));
+//     })
+//   }
+// };

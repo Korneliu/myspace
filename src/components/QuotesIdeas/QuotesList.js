@@ -17,10 +17,6 @@ const QuoteList = (props) => {
   )
 };
 
-<button onClick={() => {
-  dispatch(removeNote({ id }))
-}}>Remove</button>
-
 const mapStateToProps = (state) => {
   return {
     quotes: state.quotes
