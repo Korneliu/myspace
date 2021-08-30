@@ -10,7 +10,7 @@ import { startSetIdeas } from '../../actions/ideas';
 
 
 const QuotesIdeas = (props) => (
-  <div className='quotesideas-layout'>
+  <div className="quotesideas-layout">
     <h1>Quotes & Ideas</h1>
     <Navbar />
 
