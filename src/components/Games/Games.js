@@ -4,12 +4,14 @@ import { NavLink } from 'react-router-dom';
 import Number from './Number';
 
 
-
 export default class Games extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      number: 0
+      randomNumber: 0,
+      number: 0,
+      quotes: ["whatever", "here", "there"],
+      oneQuote: ''
     }
   }
   generateRandomNumber = e => {
@@ -28,7 +30,18 @@ export default class Games extends React.Component {
           randomNumber={this.generateRandomNumber}
           number={this.state.number}
         />
-      </div>
+
+        <h1>Quotes</h1>
+        <button onClick={e => {
+          e.preventDefault();
+          this.setState({
+            oneQuote: this.state.quotes[Math.floor(Math.random() * this.state.quotes.length)]
+          })
+
+        }}>Click
+        </button>
+        <h3>{this.state.oneQuote}</h3>
+      </div >
     )
   }
 
