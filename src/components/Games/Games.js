@@ -30,20 +30,8 @@ export default class Games extends React.Component {
           randomNumber={this.generateRandomNumber}
           number={this.state.number}
         />
-
-        <h1>Quotes</h1>
-        <button onClick={e => {
-          e.preventDefault();
-          this.setState({
-            oneQuote: this.state.quotes[Math.floor(Math.random() * this.state.quotes.length)]
-          })
-
-        }}>Click
-        </button>
-        <h3>{this.state.oneQuote}</h3>
-      </div >
+      </div>
     )
   }
-
-}
+};
 
