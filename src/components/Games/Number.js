@@ -1,5 +1,5 @@
 import React from 'react';
-import Games from './Games';
+
 
 
 const Number = props => (

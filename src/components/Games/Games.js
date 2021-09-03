@@ -17,6 +17,7 @@ export default class Games extends React.Component {
     this.setState({
       oneQuote: this.state.quotes[Math.floor(Math.random() * this.state.quotes.length)]
     })
+    console.log(this.state.oneQuote)
   }
   generateRandomNumber = e => {
     e.preventDefault()
@@ -39,6 +40,7 @@ export default class Games extends React.Component {
           quotes={this.state.quotes}
           oneQuote={this.state.oneQuote}
         />
+        <NavLink to='/gamesSecond' activeClassName="is-active">Games Second</NavLink>
       </div>
     )
   }
