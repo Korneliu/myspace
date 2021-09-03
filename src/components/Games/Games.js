@@ -40,7 +40,6 @@ export default class Games extends React.Component {
           quotes={this.state.quotes}
           oneQuote={this.state.oneQuote}
         />
-        <NavLink to='/gamesSecond' activeClassName="is-active">Games Second</NavLink>
       </div>
     )
   }

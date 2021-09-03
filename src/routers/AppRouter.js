@@ -10,7 +10,7 @@ import EditNotePage from '../components/Notes/EditNotePage';
 import QuotesIdeas from '../components/QuotesIdeas/QuotesIdeas';
 import Games from '../components/Games/Games';
 import Code from '../components/Code/Code';
-import Gamesone from '../components/Games/Gamesone';
+
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -24,7 +24,6 @@ const AppRouter = () => (
         <Route path="/editnote/:id" component={EditNotePage} />
         <Route path="/quotesideas" component={QuotesIdeas} />
         <Route path="/games" component={Games} />
-        <Route path="/gamessecond" component={Gamesone} />
         <Route path="/code" component={Code} />
         <Route component={NotFoundPage} />
       </Switch>
