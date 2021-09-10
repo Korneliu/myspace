@@ -10,13 +10,15 @@ import EditNotePage from '../components/Notes/EditNotePage';
 import QuotesIdeas from '../components/QuotesIdeas/QuotesIdeas';
 import Games from '../components/Games/Games';
 import Code from '../components/Code/Code';
+import LoginPage from '../components/LoginPage';
 
 
 const AppRouter = () => (
   <BrowserRouter>
     <div>
       <Switch>
-        <Route path="/" component={MySpaceDashboard} exact={true} />
+        <Route path="/" component={LoginPage} exact={true} />
+        <Route path="/myspacedashboard" component={MySpaceDashboard} />
         <Route path="/notes" component={Notes} />
         <Route path="/createnote" component={AddNotePage} />
         <Route path="/createidea" component={AddIdeaPage} />
