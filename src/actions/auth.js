@@ -12,3 +12,4 @@ export const startLogout = () => {
     return firebase.auth().signOut();
   }
 };
+

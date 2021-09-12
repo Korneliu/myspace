@@ -10,12 +10,14 @@ import EditNotePage from '../components/Notes/EditNotePage';
 import QuotesIdeas from '../components/QuotesIdeas/QuotesIdeas';
 import Games from '../components/Games/Games';
 import Code from '../components/Code/Code';
+import Header from '../components/Header';
 import LoginPage from '../components/LoginPage';
 
 
 const AppRouter = () => (
   <BrowserRouter>
     <div>
+      <Header />
       <Switch>
         <Route path="/" component={LoginPage} exact={true} />
         <Route path="/myspacedashboard" component={MySpaceDashboard} />

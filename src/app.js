@@ -14,9 +14,9 @@ import { firebase } from './firebase/firebase';
 
 const store = configureStore();
 
-store.subscribe(() => {
-  console.log(store.getState());
-})
+// store.subscribe(() => {
+//   console.log(store.getState());
+// })
 
 
 const noteOne = store.dispatch(addNote({ description: 'Map', text: 'read about map method' }))
