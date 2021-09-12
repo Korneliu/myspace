@@ -1,6 +1,6 @@
 import React from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
-import createHistory from 'history/createBrowserHistory';
+import { Router, Route, Switch, BrowserRouter } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 import Notes from '../components/Notes/Notes';
 import MySpaceDashboard from '../components/MySpaceDashboard';
 import NotFoundPage from '../components/NotFoundPage';
@@ -11,18 +11,15 @@ import EditNotePage from '../components/Notes/EditNotePage';
 import QuotesIdeas from '../components/QuotesIdeas/QuotesIdeas';
 import Games from '../components/Games/Games';
 import Code from '../components/Code/Code';
-import Header from '../components/Header';
-import LoginPage from '../components/LoginPage';
 
-export const history = createHistory();
+
+export const history = createBrowserHistory();
 
 const AppRouter = () => (
-  <Router history={history} >
+  <BrowserRouter>
     <div>
-      <Header />
       <Switch>
-        <Route path="/" component={LoginPage} exact={true} />
-        <Route path="/myspacedashboard" component={MySpaceDashboard} />
+        <Route path="/" component={MySpaceDashboard} exact={true} />
         <Route path="/notes" component={Notes} />
         <Route path="/createnote" component={AddNotePage} />
         <Route path="/createidea" component={AddIdeaPage} />
@@ -34,7 +31,7 @@ const AppRouter = () => (
         <Route component={NotFoundPage} />
       </Switch>
     </div>
-  </Router>
+  </BrowserRouter>
 )
 
 export default AppRouter;

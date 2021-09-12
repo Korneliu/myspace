@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import AppRouter from './routers/AppRouter';
+import AppRouter, { history } from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import { addNote, editNote, removeNote } from './actions/notes';
 import { startSetIdeas } from './actions/ideas';
@@ -36,14 +36,27 @@ const jsx = (
 
 ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
 
+// firebase.auth().onAuthStateChanged((user) => {
+//   if (user) {
+//     renderApp();
+//     if (history.location.pathname === '/') {
+//       history.push('/myspacedashboard')
+//     }
+//   } else {
+//     renderApp();
+//     history.push('/');
+//   }
+// });
+
 store.dispatch(startSetIdeas()).then(() => {
   ReactDOM.render(jsx, document.getElementById('app'));
 })
 
-firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-    console.log('log in')
-  } else {
-    console.log('log out')
-  }
-});
+
+// let hasRendered = false;
+// const renderApp = () => {
+//   if (!hasRendered) {
+//     ReactDOM.render(jsx, document.getElementById('app'));
+//     hasRendered = true;
+//   }
+// }
