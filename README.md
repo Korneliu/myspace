@@ -1,0 +1,2 @@
+# myspace
+It's going to be my personal website with few sections. Note  section for writing some notes. QuotesIdeas section which will generate life ideas and same useful quotes (motivational things) Code section where I can write down important info and pieces of code. Games section with short games tic-tac-toe and rock-paper-scissors. Probably finance section with some real time generated market data.
